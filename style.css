@@ -500,3 +500,94 @@ pre[class*="language-"] {
 }
 
 footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); margin-top: 40px; color: var(--text-muted); font-size: 0.8rem; }
+
+
+/* =========================================
+   VERSION MOBILE (RESPONSIVE)
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    /* 1. ADAPTATION DU MENU */
+    nav {
+        position: relative; /* On enlève le sticky sur mobile si ça gêne, sinon laisse sticky */
+        padding: 10px 0;
+    }
+
+    .nav-container {
+        flex-direction: column; /* Met le logo au-dessus des liens */
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap; /* Permet aux liens de passer à la ligne */
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .nav-links a, .dropbtn {
+        margin-left: 0; /* Enlève la marge gauche forcée */
+        font-size: 0.85rem; /* Texte un peu plus petit */
+    }
+    
+    /* On centre les menus déroulants */
+    .dropdown-content {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    /* 2. RESTRUCTURATION DE LA GRILLE (BENTO) */
+    .bento-grid {
+        grid-template-columns: 1fr; /* Une seule colonne pour tout le monde */
+        gap: 15px;
+    }
+
+    /* Force toutes les cartes à prendre 100% de la largeur */
+    .col-12, .col-8, .col-6, .col-4 {
+        grid-column: span 1 !important;
+    }
+
+    /* 3. AJUSTEMENTS DE TEXTE ET ESPACES */
+    .container {
+        padding: 20px; /* Moins de marge sur les côtés */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Titre moins gros */
+        text-align: center;
+        width: 100%;
+    }
+    
+    .page-title {
+        text-align: center;
+    }
+
+    /* 4. AJUSTEMENTS DES MODALES (POP-UP) */
+    .modal-content {
+        grid-template-columns: 1fr; /* Galerie photo : 1 seule image par ligne */
+        width: 95%;
+        margin-top: 20%;
+    }
+
+    .modal-content-sql {
+        width: 95%; /* Code SQL prend plus de place */
+        padding: 15px;
+    }
+
+    pre {
+        font-size: 0.7rem; /* Code plus petit pour pas dépasser */
+    }
+
+    /* 5. HEADER ET PHOTO */
+    .container > div[style*="display: flex"] {
+        justify-content: center !important;
+        text-align: center;
+    }
+    
+    /* La photo de profil se centre */
+    .container > div > div[style*="border-radius"] {
+        margin-top: 20px;
+    }
+}
