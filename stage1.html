@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Stage | SFC Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            
+            <div class="nav-links" style="display: flex; align-items: center;">
+                <a href="index.html">CV / Accueil</a>
+                
+                <div class="dropdown">
+                    <button class="dropbtn active-drop">Stage ▾</button>
+                    <div class="dropdown-content">
+                        <a href="stage1.html" style="color: var(--accent);">1ère année</a>
+                        <a href="stage2.html">2ème année</a>
+                    </div>
+                </div>
+
+                <a href="veille.html">Veille</a>
+
+                <div class="dropdown">
+                    <a href="rectorat.html" class="dropbtn">Rectorat ▾</a>
+                    <div class="dropdown-content">
+                        <a href="e5.html">E5</a>
+                        <a href="e6.html">E6</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Rapport de Stage <br><span>SFC Solutions</span>.</h1>
+
+        <div class="bento-grid">
+            
+            <div class="card col-12">
+                <span class="date">Du 26/05/2025 au 27/06/2025</span>
+                <div style="display: flex; justify-content: space-between; align-items: start; gap: 40px; flex-wrap: wrap;">
+                    <div style="flex: 1;">
+                        <h2>L'Entreprise : SFC Solutions Automotive France</h2>
+                        <p>SFC Solutions est une SAS (Société par Actions Simplifiée), experte dans le développement et la fabrication de systèmes d’étanchéité pour le secteur automobile.</p>
+                        <p style="margin-top: 10px; color: var(--text-muted);">
+                            <strong>Mission :</strong> Assurer la protection des véhicules (bruit, poussière, eau).<br>
+                            Membre d’Amaneos, acteur mondial de l’industrie automobile.
+                        </p>
+                    </div>
+                    <div style="background: #fff; padding: 10px; border-radius: 8px; width: 200px; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/logo_stage.png" alt="Logo SFC Solutions" style="width: 100%; border: none; margin: 0;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-12">
+                <h2>Le Projet HSE (Hygiène Sécurité Environnement)</h2>
+                <p style="font-size: 1.1rem; color: #fff; margin-bottom: 15px;"><strong>Objectif :</strong> Mettre en place un suivi des flux de déchets sur le site Transières en France via Power BI.</p>
+                <div style="margin-top: 10px; border-top: 1px solid var(--border); padding-top: 15px;">
+                    <p class="date">Types de déchets suivis :</p>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <span class="badge">Déchet de boudinage</span>
+                        <span class="badge">Déchet technique</span>
+                        <span class="badge">Déchet produit fini</span>
+                        <span class="badge">Caoutchouc déclassé</span>
+                        <span class="badge">Métaux</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-12">
+                <h2>Environnement Technique</h2>
+                <ul style="list-style: none; margin-top: 10px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    <li style="border-left: 2px solid var(--accent); padding-left: 10px;">
+                        💻 <strong>Matériel :</strong><br> PC Portable DELL + Écran
+                    </li>
+                    <li style="border-left: 2px solid var(--accent); padding-left: 10px;">
+                        🗄️ <strong>Serveur :</strong><br> Distant (Datawarehouse)
+                    </li>
+                    <li style="border-left: 2px solid var(--accent); padding-left: 10px;">
+                        💾 <strong>SGBD :</strong><br> SQL Server
+                    </li>
+                    <li style="border-left: 2px solid var(--accent); padding-left: 10px;">
+                        🔄 <strong>ETL :</strong><br> Talend Open Studio
+                    </li>
+                    <li style="border-left: 2px solid var(--accent); padding-left: 10px;">
+                        📊 <strong>Visualisation :</strong><br> Power BI Desktop
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card col-12">
+                <h2>Planning Prévisionnel</h2>
+                <img src="images/image-4.png" alt="Planning Prévisionnel" style="width: 100%; height: auto; border: none;">
+            </div>
+
+            <div class="card col-12">
+                <h2>1. Connexion & ETL (Talend)</h2>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                    <div class="timeline-item">
+                        <span class="date">Étape 1 : Connexion Serveur</span>
+                        <p>Accès au serveur Datawarehouse.</p>
+                        <img src="images/image-5.png" alt="Connexion Serveur">
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="date">Étape 2 : Nettoyage (Talend)</span>
+                        <p>Construction du Job ETL :</p>
+                        <ul style="font-size: 0.9rem; margin-top: 10px; color: #ccc;">
+                            <li>• <strong>Prejobs :</strong> Connexion BDD + Envoi mail.</li>
+                            <li>• <strong>tDBinput_1 :</strong> Lecture sources.</li>
+                            <li>• <strong>tMap :</strong> Nettoyage et transformation.</li>
+                            <li>• <strong>tDBoutput2 :</strong> Injection cible.</li>
+                            <li>• <strong>Postjobs :</strong> Déconnexion + Confirmation.</li>
+                        </ul>
+                        <img src="images/image-6.png" alt="Job Talend ETL">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-12">
+                <h2>2. SQL & Visualisation</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div class="timeline-item">
+                        <span class="date">Étape 3 : Requête SQL</span>
+                        <p>Création d'une vue SQL massive regroupant toutes les tables et vues nécessaires.</p>
+                        <span class="badge" style="margin-top: 10px;">Requête SQL Complexe</span>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="date">Étape 4 : Power BI (Modélisation)</span>
+                        <p>Liaison de la vue SQL avec Power BI Desktop.</p>
+                        <img src="images/image-7.png" alt="Liaison Power BI">
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="date">Étape 5 : DAX & Colonnes</span>
+                        <p>Création de colonnes calculées via le langage DAX.</p>
+                        <div style="display: grid; gap: 10px;">
+                            <img src="images/image-8.png" alt="Formule DAX">
+                            <img src="images/image-9.png" alt="Résultat colonnes">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-12">
+                <h2>Résultat Final</h2>
+                <p>Création complète de 6 pages de rapport.</p>
+                <img src="images/image-10.png" alt="Barre de pages Power BI">
+                <img src="images/image-11.png" alt="Dashboard Final Power BI" style="width: 100%;">
+            </div>
+
+            <div class="card col-12">
+                <h2>Compétences Développées (BTS SIO)</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+                    
+                    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
+                        <span class="date">B1.1 Gérer le patrimoine</span>
+                        <ul style="list-style: none; font-size: 0.9rem;">
+                            <li>✅ Exploiter des références, normes et standards</li>
+                            <li>✅ Recenser et identifier les ressources numériques</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
+                        <span class="date">B1.2 Répondre aux incidents</span>
+                        <ul style="list-style: none; font-size: 0.9rem;">
+                            <li>✅ Traiter des demandes concernant les services réseau et système applicatifs</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
+                        <span class="date">B1.4 Travailler en mode projet</span>
+                        <ul style="list-style: none; font-size: 0.9rem;">
+                            <li>✅ Planifier les activités</li>
+                            <li>✅ Évaluer les indicateurs de suivi et analyser les écarts</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
+                        <span class="date">B1.5 Service informatique</span>
+                        <ul style="list-style: none; font-size: 0.9rem;">
+                            <li>✅ Déployer un service</li>
+                            <li>✅ Accompagner les utilisateurs dans la mise en place</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        © 2025 Enzo VINCENT - Portfolio
+    </footer>
+</body>
+</html>

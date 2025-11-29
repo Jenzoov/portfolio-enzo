@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique - Enzo VINCENT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <div class="nav-links" style="display: flex; align-items: center;">
+                <a href="index.html">CV / Accueil</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Stage ▾</button>
+                    <div class="dropdown-content">
+                        <a href="stage1.html">1ère année</a>
+                        <a href="stage2.html">2ème année</a>
+                    </div>
+                </div>
+                <a href="veille.html" class="active">Veille</a>
+                <div class="dropdown">
+                    <a href="rectorat.html" class="dropbtn">Rectorat ▾</a>
+                    <div class="dropdown-content">
+                        <a href="e5.html">E5</a>
+                        <a href="e6.html">E6</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Veille <br><span>Technologique</span>.</h1>
+
+        <div class="bento-grid">
+            
+            <div class="card col-12">
+                <h2>Sujet : Les langages de programmation</h2>
+                <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+                    <div style="flex: 1;">
+                        <p style="margin-bottom: 10px;"><strong>Présentation :</strong> Un langage de programmation est un ensemble de règles permettant d’écrire du code compréhensible par un ordinateur. Il sert à donner des instructions pour exécuter des tâches spécifiques.</p>
+                        <p style="margin-bottom: 10px;"><strong>Utilité :</strong> Les langages de programmation sont utilisés dans tous les domaines comme le Développement web, Applications mobiles, IA, Jeux vidéo...</p>
+                        <p style="margin-bottom: 10px;"><strong>Évolution :</strong> Au fil du temps beaucoup de langages sont apparus et d’autres ont disparus. Les langages de programmation évoluent sans cesse et répondent aux besoins du moment comme la sécurité ou Python avec l’IA.</p>
+                        <p><strong>Exemples :</strong> Python pour l’IA, C/C++ pour les jeux vidéo, JavaScript pour le développement web, Rust pour la sécurité...</p>
+                    </div>
+                    <img src="images/langage_programmation02-1.jpg" alt="Langages Prog" style="max-width: 400px; border-radius: 8px; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="card col-12">
+                <h2>Bornage de la Veille</h2>
+                <div class="bornage-box">
+                    <span class="bornage-item">Tendances & Évolutions</span>
+                    <span style="font-size: 2rem; color: #333;">|</span>
+                    <span class="bornage-item">Performances & Optimisation</span>
+                </div>
+            </div>
+
+            <div class="card col-12">
+                <h2>Outils de Veille Utilisés</h2>
+                <p style="margin-bottom: 20px; font-size: 0.9rem; color: #888;">(Cliquez sur les images pour voir toutes les captures)</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    
+                    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
+                        <h3>1. Google Alerts</h3>
+                        <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Le plus efficace grâce aux nombreux mots clés précis.</p>
+                        <img src="images/google_alerte_logo.png" 
+                             alt="Google Alerts" 
+                             class="tool-img"
+                             onclick="openModal('images/google_1.webp', 'images/google_2.webp', 'images/google_3.webp')">
+                    </div>
+
+                    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
+                        <h3>2. Zotero & Connector</h3>
+                        <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Pratique, automatique, gestion bibliographique et flux RSS.</p>
+                        <img src="images/zotero_logo.webp" 
+                             alt="Zotero" 
+                             class="tool-img"
+                             onclick="openModal('images/zotero_1.webp', 'images/zotero_2.webp', 'images/zotero_3.webp', 'images/zotero_4.webp', 'images/zotero_6.webp', 'images/zotero_5.webp')">
+                    </div>
+
+                    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
+                        <h3>3. Diigo</h3>
+                        <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Sauvegarder, annoter des pages. Moins complet que Zotero.</p>
+                        <img src="images/diigo_logo.png" 
+                             alt="Diigo" 
+                             class="tool-img"
+                             onclick="openModal('images/diigo_1.png')">
+                    </div>
+
+                    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
+                        <h3>4. Feedbro</h3>
+                        <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Extension navigateur simple pour suivre des flux RSS.</p>
+                        <img src="images/feedbro_logo.png" 
+                             alt="Feedbro" 
+                             class="tool-img"
+                             onclick="openModal('images/feedbro_1.png')">
+                    </div>
+
+                    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
+                        <h3>5. Feedly</h3>
+                        <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Agrégateur de flux RSS, interface simple.</p>
+                        <img src="images/feedly_logo.png" 
+                             alt="Feedly" 
+                             class="tool-img"
+                             onclick="openModal('images/feedly_1.png', 'images/feedly_2.png')">
+                    </div>
+
+                    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
+                        <h3>6. Inoreader</h3>
+                        <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Excellente interface et gestion des flux.</p>
+                        <img src="images/inoreader_logo.jpg" 
+                             alt="Inoreader" 
+                             class="tool-img"
+                             onclick="openModal('images/inoreader_1.jpg')">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card col-12">
+                <h2>Actualités Analysées</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 30px;">
+
+                    <div class="news-item">
+                        <span class="news-number">1ère news</span>
+                        <div class="news-meta">
+                            <strong>Date :</strong> 05/03/25 | <strong>Source :</strong> DataScientest<br>
+                            <strong>Auteur :</strong> Gabin Paul<br>
+                            <span class="bornage">Tendance / évolution</span>
+                        </div>
+                        <h3 style="color:#fff; font-size:1.2rem;">Le créateur du C++ s'en remet à sa communauté pour sauver son langage</h3>
+                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                            Suite à l’importance de la cybersécurité de plus en plus présente, Bjarne Stroustrup du C++ remet en question son langage. Il souhaite que la communauté renforce la sécurité, qui depuis plusieurs années selon les experts en cybersécurité, fait défaut au C++. Le créateur a donc proposé le framework Profiles qui pourrait avoir une meilleure gestion de la mémoire. Malheureusement ce n’est pas la solution miracle car elle divise notamment à cause de la limitation des fonctionnalités que pourrait avoir ce framework et d’autres alternatives ne sont pas à exclure.
+                        </p>
+                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                            <a href="http://portfolioenzo.atwebpages.com/wp-content/uploads/2025/05/EVI_C.pdf" target="_blank" class="btn-pdf">📄 Voir PDF</a>
+                            <a href="https://datascientest.com/le-createur-du-c-sen-remet-a-sa-communaute-pour-sauver-son-langage" target="_blank" class="source-link">Voir la source</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <span class="news-number">2ème news</span>
+                        <div class="news-meta">
+                            <strong>Date :</strong> 21/03/25 | <strong>Source :</strong> elektormagazine<br>
+                            <strong>Auteur :</strong> Stuart Cording<br>
+                            <span class="bornage">Tendance / évolution</span>
+                        </div>
+                        <h3 style="color:#fff; font-size:1.2rem;">Préparer Rust pour l'aérospatiale et la défense</h3>
+                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                            La croissante popularisation de Rust commence à intéresser des domaines comme l’aérospatiale, la défense, le médical ou autre ce qui va mettre de côté le C++ et le C. C’est la sécurité et la gestion de mémoire qui ont permis cela à Rust mais de nombreux clients hésitent à passer à un projet avec Rust.
+                        </p>
+                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                            <a href="http://portfolioenzo.atwebpages.com/wp-content/uploads/2025/05/EVI_Rust_aerospatiale.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                            <a href="https://www.elektormagazine.fr/news/preparer-rust-pour-l-aerospatiale-et-la-defense" target="_blank" class="source-link">Voir la source</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <span class="news-number">3ème news</span>
+                        <div class="news-meta">
+                            <strong>Date :</strong> 17/04/25 | <strong>Source :</strong> ITdaily<br>
+                            <strong>Auteur :</strong> Katrien Duchène<br>
+                            <span class="bornage">Tendance / évolution</span>
+                        </div>
+                        <h3 style="color:#fff; font-size:1.2rem;">Google Docs prend désormais en charge plusieurs langages (HTML, CSS)</h3>
+                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                            Google a décidé d’ajouter le HTML, CSS, C# et bien d’autres, dans la fonction blocs de code dans Google Documents. Il suffit d’aller dans Insérer des éléments de construction -> blocs de code, et de choisir le langage. Cela va aider les développeurs qui utilisent activement Google Docs pour des rédactions techniques ou autres en intégrant du code de manière claire.
+                        </p>
+                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                            <a href="http://portfolioenzo.atwebpages.com/wp-content/uploads/2025/05/EVI_google_docs.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                            <a href="https://itdaily.fr/nouvelles/cloud/google-docs-langages-de-programmation/" target="_blank" class="source-link">Voir la source</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <span class="news-number">4ème news</span>
+                        <div class="news-meta">
+                            <strong>Date :</strong> 14/04/25 | <strong>Source :</strong> ZDNET<br>
+                            <strong>Auteur :</strong> David Gewirtz<br>
+                            <span class="bornage">Optimisation / performance</span>
+                        </div>
+                        <h3 style="color:#fff; font-size:1.2rem;">Pourquoi Google Code Assist est peut-être l'outil qu'il vous faut</h3>
+                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                            Google a revu Google Code Assist et l’a considérablement amélioré notamment dans la compréhension du contexte du code ce qui aide grandement dans la génération de blocs de code. Voici les différentes fonctionnalités améliorées : Migrer le code, Implémenter de nouvelles fonctionnalités depuis GitHub, Effectuer des revues de code, Générer des tests et créer de la documentation.
+                        </p>
+                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                            <a href="http://portfolioenzo.atwebpages.com/wp-content/uploads/2025/05/EVI_google_code.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                            <a href="https://www.zdnet.fr/actualites/pourquoi-google-code-assist-est-peut-etre-enfin-loutil-de-programmation-dont-vous-avez-besoin-411996.htm" target="_blank" class="source-link">Voir la source</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <span class="news-number">5ème news</span>
+                        <div class="news-meta">
+                            <strong>Date :</strong> 27/05/25 | <strong>Source :</strong> Clubic<br>
+                            <strong>Auteur :</strong> Guillaume Belfiore<br>
+                            <span class="bornage">Tendance / évolution</span>
+                        </div>
+                        <h3 style="color:#fff; font-size:1.2rem;">Java fête ses 30 ans, une histoire marquée par le procès Google vs Oracle</h3>
+                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                            Java a été créé il y a 30 ans déjà et est aujourd’hui encore un pilier des langages de programmation. L’article aborde le procès entre Oracle et Google, où Oracle accusait Google d’avoir utilisé du code Java sans licence pour développer Android. En 2021, la Cour suprême des États-Unis a tranché en faveur de Google, estimant que cette utilisation relevait du « fair use ». Ce procès a soulevé des questions sur la protection des API par le droit d’auteur.
+                        </p>
+                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                            <a href="http://portfolioenzo.atwebpages.com/wp-content/uploads/2025/06/EVI_Google_Oracle.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                            <a href="https://www.clubic.com/actualite-566919-java-fete-ses-30-ans-comment-le-proces-google-vs-oracle-a-change-la-donne.html" target="_blank" class="source-link">Voir la source</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <span class="news-number">6ème news</span>
+                        <div class="news-meta">
+                            <strong>Date :</strong> 26/05/25 | <strong>Source :</strong> ZDNET<br>
+                            <strong>Auteur :</strong> Steven Vaughan-Nichols<br>
+                            <span class="bornage">Tendance / évolution</span>
+                        </div>
+                        <h3 style="color:#fff; font-size:1.2rem;">Rust a 10 ans : né d'une panne d'ascenseur</h3>
+                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                            Rust, le langage de programmation créer par Graydon Hoare a maintenant 10 ans. Hoare a décidé de créé Rust, en 2015, suite à une panne d’ascenseur à cause d’erreurs logicielles, avec une meilleure sécurité et efficacité. Au fil du temps Rust devient de plus en plus apprécié par les développeurs grâce à sa sécurité mémoire.
+                        </p>
+                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                            <a href="http://portfolioenzo.atwebpages.com/wp-content/uploads/2025/06/EVI_Rust-10ans.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                            <a href="https://www.zdnet.fr/actualites/rust-a-10-ans-comment-un-ascenseur-casse-a-change-le-logiciel-pour-toujours-476081.htm" target="_blank" class="source-link">Voir la source</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <span class="news-number">7ème news</span>
+                        <div class="news-meta">
+                            <strong>Date :</strong> 18/06/25 | <strong>Source :</strong> Programmez!<br>
+                            <strong>Auteur :</strong> Francoistonic<br>
+                            <span class="bornage">Optimisation / performance</span>
+                        </div>
+                        <h3 style="color:#fff; font-size:1.2rem;">Rust vs Go : quel langage pour 2025 ?</h3>
+                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                            Rust et Go sont deux langages de programmation en forte croissance. Rust est utilisé par plus de 2,3 millions de développeurs surtout pour sa gestion de mémoire, sa sécurité, pas de data races, langages compilés mais il reste un langage difficile à apprendre. Concernant Go il est plus simple à apprendre et est utile pour le cloud, le web, les IoT, les CLI. Rust est donc à prioriser pour un haut niveau de sécurité et Go pour un développement et déploiement rapides.
+                        </p>
+                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                            <a href="http://portfolioenzo.atwebpages.com/wp-content/uploads/2025/06/EVI_RustvsGO.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                            <a href="https://www.programmez.com/actualites/rust-vs-go-quel-langage-pour-2025-37868" target="_blank" class="source-link">Voir la source</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <span class="news-number">8ème news</span>
+                        <div class="news-meta">
+                            <strong>Date :</strong> 10/06/25 | <strong>Source :</strong> Korben<br>
+                            <strong>Auteur :</strong> Korben<br>
+                            <span class="bornage">Tendance / évolution</span>
+                        </div>
+                        <h3 style="color:#fff; font-size:1.2rem;">Rust débarque enfin dans le noyau Linux</h3>
+                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                            Le noyau Linux va intégrer Rust avec la version 6.15 avec l’ajout du premier driver graphique, NOVA développé par Red Hat, écrit en Rust pour les GPU NVIDIA RTX 2000 et +. Il promet d’être plus stable, plus sûr et plus performant. Cette nouvelle est très controversée avec d’un côté les défenseurs de Rust et de l’autre les puristes du C. Rust pourrait réduire jusqu’à 70% des vulnérabilités courantes du noyau.
+                        </p>
+                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                            <a href="http://portfolioenzo.atwebpages.com/wp-content/uploads/2025/06/EVI_RustNoyauLinux.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                            <a href="https://korben.info/rust-linux-kernel-nova-nvidia-driver.html" target="_blank" class="source-link">Voir la source</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <span class="news-number">9ème news</span>
+                        <div class="news-meta">
+                            <strong>Date :</strong> 25/07/25 | <strong>Source :</strong> GoodTech.info<br>
+                            <strong>Auteur :</strong> GoodTech.info<br>
+                            <span class="bornage">Tendance / évolution</span>
+                        </div>
+                        <h3 style="color:#fff; font-size:1.2rem;">Le développement de PHP 8.5.0 a démarré</h3>
+                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                            Une nouvelle version de PHP (la 8.5.0) est en cours de développement et est en phase de test. La 2ème alpha est déjà disponible mais la version finale est prévue pour le 20 novembre. Parmi les nouveautés il y a l’introduction du pipe operator (|>) qui va permettre d’enchaîner plusieurs fonctions de manière lisible, l’ajout de array_first() et array_last() pour le premier et derniers éléments d’un tableau, il y a aussi [NoDiscard] pour qu’une fonction retourne une valeur qui ne doit pas être ignorée.
+                        </p>
+                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                            <a href="http://portfolioenzo.atwebpages.com/wp-content/uploads/2025/08/EVI_PHPnouveaux.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                            <a href="https://goodtech.info/php-85-nouveautes-langage-php2025/" target="_blank" class="source-link">Voir la source</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <span class="news-number">10ème news</span>
+                        <div class="news-meta">
+                            <strong>Date :</strong> 24/07/25 | <strong>Source :</strong> Linfodrome<br>
+                            <strong>Auteur :</strong> Mominé COULIBALY<br>
+                            <span class="bornage">Optimisation / performance</span>
+                        </div>
+                        <h3 style="color:#fff; font-size:1.2rem;">5 tâches à ne jamais confier à l’IA</h3>
+                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                            L’IA prend de plus en plus de place chez les développeurs mais elle reste pour certains cas pas assez efficace, voici 5 tâches concernées : Le manque de raisonnement contextuel / La cybersécurité / Les données sensibles / Optimisation fine / Collaboration humaine. Pour ces raisons ne pas se fier à l’IA dans certains cas est primordial.
+                        </p>
+                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                            <a href="http://portfolioenzo.atwebpages.com/wp-content/uploads/2025/08/EVI_5TacheIA.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                            <a href="https://www.linfodrome.com/high-tech/111758-domaine-de-la-programmation-5-taches-a-ne-jamais-confier-a-l-intelligence-artificielle" target="_blank" class="source-link">Voir la source</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <span class="news-number">11ème news</span>
+                        <div class="news-meta">
+                            <strong>Date :</strong> 25/08/25 | <strong>Source :</strong> Programmez!<br>
+                            <strong>Auteur :</strong> Francoistonic<br>
+                            <span class="bornage">Tendance / évolution</span>
+                        </div>
+                        <h3 style="color:#fff; font-size:1.2rem;">JetBrains veut créer un nouveau langage</h3>
+                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                            JetBrains souhaite créer un nouveau langage de programmation qui n’a pas encore de nom qui a pour but de favoriser l’utilisation de l’IA et le développement multiplateforme. Ce langage serait un dérivé de Kotlin et en anglais.
+                        </p>
+                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                            <a href="http://portfolioenzo.atwebpages.com/wp-content/uploads/2025/08/EVI_JetbrainsNouveau.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                            <a href="https://www.programmez.com/actualites/jetbrains-veut-creer-un-nouveau-langage-avec-une-tres-haute-abstraction-38103" target="_blank" class="source-link">Voir la source</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item">
+                        <span class="news-number">12ème news</span>
+                        <div class="news-meta">
+                            <strong>Date :</strong> 21/08/25 | <strong>Source :</strong> typescript.developpez<br>
+                            <strong>Auteur :</strong> Stéphane le calme<br>
+                            <span class="bornage">Tendance / évolution</span>
+                        </div>
+                        <h3 style="color:#fff; font-size:1.2rem;">Node.js intègre enfin le support de TypeScript en natif</h3>
+                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                            Il est désormais possible d’exécuter et de lire directement les fichiers .ts sans passer par une étape de compilation manuelle. Node.js retire simplement les annotations de types (string, number...) et transforme le code en JavaScript exécutable. C’est ce que l’on appelle le type stripping. Cela rend la création de projets plus rapide et plus facile pour les débutants. Une grande réaction positive a lieu dans la communauté.
+                        </p>
+                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                            <a href="http://portfolioenzo.atwebpages.com/wp-content/uploads/2025/08/EVI_NodejsTypeScript.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                            <a href="https://typescript.developpez.com/actu/374878/" target="_blank" class="source-link">Voir la source</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card col-12" style="background: var(--surface-hover);">
+                <h2>Mise en application</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: center;">
+                    
+                    <div style="background: #111; padding: 20px; border-radius: 8px; border: 1px solid #333;">
+                        <strong style="color: var(--accent); font-size: 1.5rem; display: block; margin-bottom: 10px;">1. Création</strong>
+                        <p style="color: #ccc;">Développement de programmes algorithmiques identiques en <strong>C, Python et JavaScript</strong>.</p>
+                    </div>
+
+                    <div style="background: #111; padding: 20px; border-radius: 8px; border: 1px solid #333;">
+                        <strong style="color: var(--accent); font-size: 1.5rem; display: block; margin-bottom: 10px;">2. Analyse</strong>
+                        <p style="color: #ccc;">Mesure et comparaison du <strong>temps d'exécution</strong> et de la <strong>consommation mémoire</strong>.</p>
+                    </div>
+
+                    <div style="background: #111; padding: 20px; border-radius: 8px; border: 1px solid #333;">
+                        <strong style="color: var(--accent); font-size: 1.5rem; display: block; margin-bottom: 10px;">3. Conclusion</strong>
+                        <p style="color: #ccc;">Vérification de la pertinence de chaque langage selon les contraintes (Vitesse vs Facilité).</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="galleryModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content"></div>
+    </div>
+
+    <script>
+        // Fonction qui accepte un nombre illimité d'images
+        function openModal(...images) {
+            const modal = document.getElementById("galleryModal");
+            const container = document.querySelector(".modal-content");
+            
+            // 1. Vider le contenu précédent
+            container.innerHTML = '';
+
+            // 2. Ajouter chaque image passée en paramètre
+            images.forEach(src => {
+                const img = document.createElement("img");
+                img.src = src;
+                img.classList.add("modal-img");
+                container.appendChild(img);
+            });
+
+            // 3. Afficher la modale
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("galleryModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("galleryModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <footer>
+        © 2025 Enzo VINCENT - Portfolio
+    </footer>
+</body>
+</html>
