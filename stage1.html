@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rapport de Stage | SFC Solutions</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -196,7 +197,7 @@
         <div class="modal-content-sql">
             <span class="close" onclick="closeSqlModal()">&times;</span>
             <h3 style="color: var(--accent); margin-bottom: 15px;">Vue SQL : Gestion_Dechets</h3>
-            <pre>
+            <pre><code class="language-sql">
 CREATE VIEW [CLSEALYNX].[Gestion_Dechets]
 
 AS
@@ -342,7 +343,7 @@ quantite_dechet_valorise > 0)
  , [famille]
  , [famille_intitule]
  , [poids]
-            </pre>
+            </code></pre>
         </div>
     </div>
     
@@ -351,5 +352,7 @@ quantite_dechet_valorise > 0)
     <footer>
         © 2025 Enzo VINCENT - Portfolio
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
 </body>
 </html>

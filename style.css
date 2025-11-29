@@ -457,4 +457,46 @@ pre {
     border-radius: 2px;
 }
 
+/* --- COLORATION SYNTAXIQUE SQL (Style SQL Server) --- */
+
+/* Force le fond noir du bloc de code */
+pre[class*="language-"] {
+    background: #1a1a1a !important;
+    border: 1px solid #333;
+    text-shadow: none !important;
+    font-family: 'Consolas', 'Monaco', 'Andale Mono', monospace !important;
+}
+
+/* Mots clés (SELECT, FROM, WHERE...) en BLEU */
+.token.keyword {
+    color: #569cd6 !important;
+    font-weight: bold;
+}
+
+/* Chaînes de caractères ('texte') en ROUGE/ORANGE */
+.token.string {
+    color: #d69d85 !important;
+}
+
+/* Commentaires (-- ...) en VERT */
+.token.comment {
+    color: #57a64a !important;
+    font-style: italic;
+}
+
+/* Fonctions (SUM, COUNT...) en MAGENTA */
+.token.function {
+    color: #dcdcaa !important;
+}
+
+/* Opérateurs (=, >, <) en GRIS CLAIR */
+.token.operator {
+    color: #b4b4b4 !important;
+}
+
+/* Ponctuation (parenthèses, virgules) en BLANC */
+.token.punctuation {
+    color: #ffffff !important;
+}
+
 footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); margin-top: 40px; color: var(--text-muted); font-size: 0.8rem; }
