@@ -360,39 +360,8 @@
         <div class="modal-content"></div>
     </div>
 
-    <script>
-        // Fonction qui accepte un nombre illimité d'images
-        function openModal(...images) {
-            const modal = document.getElementById("galleryModal");
-            const container = document.querySelector(".modal-content");
-            
-            // 1. Vider le contenu précédent
-            container.innerHTML = '';
-
-            // 2. Ajouter chaque image passée en paramètre
-            images.forEach(src => {
-                const img = document.createElement("img");
-                img.src = src;
-                img.classList.add("modal-img");
-                container.appendChild(img);
-            });
-
-            // 3. Afficher la modale
-            modal.style.display = "block";
-        }
-
-        function closeModal() {
-            document.getElementById("galleryModal").style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            var modal = document.getElementById("galleryModal");
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-
+    <script src="script.js"></script>
+    
     <footer>
         © 2025 Enzo VINCENT - Portfolio
     </footer>
