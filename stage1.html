@@ -26,7 +26,7 @@
                 <a href="veille.html">Veille</a>
 
                 <div class="dropdown">
-                    <a href="rectorat.html" class="dropbtn">Rectorat ▾</a>
+                    <button class="dropbtn">Rectorat ▾</button>
                     <div class="dropdown-content">
                         <a href="e5.html">E5</a>
                         <a href="e6.html">E6</a>
@@ -101,14 +101,12 @@
 
             <div class="card col-12">
                 <h2>1. Connexion & ETL (Talend)</h2>
-                
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
                     <div class="timeline-item">
                         <span class="date">Étape 1 : Connexion Serveur</span>
                         <p>Accès au serveur Datawarehouse.</p>
                         <img src="images/connexion_serveur.png" alt="Connexion Serveur">
                     </div>
-
                     <div class="timeline-item">
                         <span class="date">Étape 2 : Nettoyage (Talend)</span>
                         <p>Construction du Job ETL :</p>
@@ -126,12 +124,12 @@
 
             <div class="card col-12">
                 <h2>2. SQL & Visualisation</h2>
-
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
                     <div class="timeline-item">
                         <span class="date">Étape 3 : Requête SQL</span>
                         <p>Création d'une vue SQL massive regroupant toutes les tables et vues nécessaires.</p>
-                        <span class="badge" style="margin-top: 10px;">Requête SQL Complexe</span>
+                        
+                        <span class="badge clickable-badge" style="margin-top: 10px;" onclick="openSqlModal()">📄 Voir la Requête SQL Complexe</span>
                     </div>
 
                     <div class="timeline-item">
@@ -154,14 +152,13 @@
             <div class="card col-12">
                 <h2>Résultat Final</h2>
                 <p>Création complète de 6 pages de rapport.</p>
-                <img src="images/powerbi_pages.png" alt="Barre de pages Power BI">
+                <img src="images/powerbi_pages.png" alt="Barre de pages Power BI" style="width: 100%; margin-bottom: 15px;">
                 <img src="images/powerbi_finale.png" alt="Dashboard Final Power BI" style="width: 100%;">
             </div>
 
             <div class="card col-12">
                 <h2>Compétences Développées (BTS SIO)</h2>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
-                    
                     <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
                         <span class="date">B1.1 Gérer le patrimoine</span>
                         <ul style="list-style: none; font-size: 0.9rem;">
@@ -169,14 +166,12 @@
                             <li>✅ Recenser et identifier les ressources numériques</li>
                         </ul>
                     </div>
-
                     <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
                         <span class="date">B1.2 Répondre aux incidents</span>
                         <ul style="list-style: none; font-size: 0.9rem;">
                             <li>✅ Traiter des demandes concernant les services réseau et système applicatifs</li>
                         </ul>
                     </div>
-
                     <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
                         <span class="date">B1.4 Travailler en mode projet</span>
                         <ul style="list-style: none; font-size: 0.9rem;">
@@ -184,7 +179,6 @@
                             <li>✅ Évaluer les indicateurs de suivi et analyser les écarts</li>
                         </ul>
                     </div>
-
                     <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
                         <span class="date">B1.5 Service informatique</span>
                         <ul style="list-style: none; font-size: 0.9rem;">
@@ -192,12 +186,183 @@
                             <li>✅ Accompagner les utilisateurs dans la mise en place</li>
                         </ul>
                     </div>
-
                 </div>
             </div>
 
         </div>
     </div>
+
+    <div id="sqlModal" class="modal">
+        <div class="modal-content-sql">
+            <span class="close" onclick="closeSqlModal()">&times;</span>
+            <h3 style="color: var(--accent); margin-bottom: 15px;">Vue SQL : Gestion_Dechets</h3>
+            <pre>
+CREATE VIEW [CLSEALYNX].[Gestion_Dechets]
+
+AS
+
+SELECT [site]
+
+, [Date_controle]
+, [article]
+, [designation]
+, [vehicule]
+, [type_stock]
+, [unite]
+, SUM([quantite]) as 'quantite'
+, SUM([montant]) as 'montant'
+, [famille_mouvement]
+, [famille_mouvement_sortie]
+, SUM([quantite_dechet_valorise]) as 'quantite_dechet_valorise'
+, [categorie_article]
+, CASE
+WHEN atelier = 'A15' THEN 'FIFR1'
+WHEN atelier = 'A27' THEN 'FIFR1'
+WHEN atelier = 'A38' THEN 'FIFR1'
+WHEN atelier = 'A40' THEN 'FIFR1'
+WHEN atelier = 'A45' THEN 'FIFR1'
+WHEN atelier = 'A50' THEN 'FIFR1'
+WHEN atelier = 'FIFR1' THEN 'FIFR1'     --Regroupement des anciens ateliers
+WHEN atelier = 'A33' THEN 'EXFR1'       --sous le nom des nouveaux
+WHEN atelier = 'A70' THEN 'EXFR1'
+WHEN atelier = 'A14' THEN 'EXFR1'
+WHEN atelier = 'A42' THEN 'EXFR1'
+WHEN atelier = 'A01' THEN 'EXFR1'
+WHEN atelier = 'EXFR1' THEN 'EXFR1'
+WHEN atelier = 'A20' THEN 'MEFR1'
+WHEN atelier = 'MEFR1' THEN 'MEFR1'
+WHEN atelier = 'A16' THEN 'Protos'
+ELSE 'Autre' END [atelier]
+, [famille]
+, [famille_intitule]
+, CASE
+WHEN [quantite_dechet_valorise] > 0 THEN SUM([poids] * [quantite_dechet_valorise])
+ELSE SUM([poids] * [quantite])
+END [poids]
+FROM
+(
+SELECT [Site_controle] as 'site'
+, [Date_controle]
+, [Article] as 'article'
+, [Designation] as 'designation'
+, [Vehicule] as 'vehicule'
+, [type_stock]
+, [Cause_FRA]
+, [unite]
+, [Quantite] as 'quantite'
+, [Montant_devise_controle] as 'montant'
+, [Devise_controle] as devise
+, [Date_production]
+, 'REQ' [famille_mouvement]
+, 'REQ' [famille_mouvement_sortie]
+, 0 [quantite_dechet_valorise]
+, '' [categorie_article]
+, [atelier_production] as 'atelier'
+, [famille]
+, [famille_intitule]
+, [poids_piece] [poids] as 'poids'
+ FROM CLSEALYNX.Rebuts_qualite
+ WHERE Rebuts_qualite.[Site_controle] = 'FR1'
+
+UNION ALL   --Concaténation des enregistrements des 3 Vues
+
+SELECT [site]
+, [date] [Date_controle]
+, [article]
+, [designation]
+, [vehicule]
+, [type_stock]
+, 'Consommation' [Cause_FRA]
+, [unite]
+, [quantite] as 'quantite'  
+, [montant] as 'montant'  
+, [devise]
+, [date] as 'Date_production'
+, [famille_mouvement]
+, [famille_mouvement_sortie]
+, 0 [quantite_dechet_valorise]
+, [categorie_article]
+, [atelier]
+, [famille]
+, [famille_intitule]
+, [poids_piece] [poids] as 'poids'
+
+ FROM CLSEALYNX.consommation_brute_historique
+
+ WHERE consommation_brute_historique.[famille_mouvement] not in('PRO', 
+'PROR', 'QUA') AND consommation_brute_historique.[site] = 'FR1'
+
+UNION ALL   --Concaténation des enregistrements des 3 Vues
+
+SELECT [site]
+, [date] as 'Date_controle'
+, [article]
+, [designation]
+, [vehicule]
+, [type_stock]
+, 'Consommation' [Cause_FRA]
+, [unite]
+, [quantite_dechet] as 'quantite'
+, [montant_dechet] as 'montant'
+, '' [devise]
+, [date] [Date_production]
+, CASE WHEN quantite_dechet_valorise > 0 THEN 'REV' ELSE 'RED' END [famille_mouvement]
+, CASE WHEN quantite_dechet_valorise > 0 THEN 'REV' ELSE 'RED' END [famille_mouvement_sortie]
+, [quantite_dechet_valorise]
+, '' [categorie_article]
+, [atelier]
+, '020' [famille]
+, 'Mélanges fabriqués' [famille_intitule]
+, [poids]
+
+ FROM CLSEALYNX.production_brute_historique
+
+ WHERE production_brute_historique.[site] = 'FR1' AND 
+(production_brute_historique.[quantite_dechet] > 0 OR 
+quantite_dechet_valorise > 0)
+
+ ) unions
+
+ WHERE Date_controle > '2025-01-01'
+ GROUP BY [site]        --Limité le nombre de lignes
+
+ , [Date_controle]
+ , [article]
+ , [designation]
+ , [vehicule]
+ , [type_stock]
+ , [unite]
+ , [quantite]
+ , [montant]
+ , [famille_mouvement]
+ , [famille_mouvement_sortie]
+ , [quantite_dechet_valorise]
+ , [categorie_article]
+ , [atelier]
+ , [famille]
+ , [famille_intitule]
+ , [poids]
+            </pre>
+        </div>
+    </div>
+
+    <script>
+        function openSqlModal() {
+            document.getElementById("sqlModal").style.display = "block";
+        }
+
+        function closeSqlModal() {
+            document.getElementById("sqlModal").style.display = "none";
+        }
+
+        // Fermer si on clique en dehors du contenu
+        window.onclick = function(event) {
+            var modal = document.getElementById("sqlModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
     <footer>
         © 2025 Enzo VINCENT - Portfolio
