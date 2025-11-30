@@ -273,24 +273,55 @@ h3 {
     border: 1px solid #444;
 }
 
-.bornage-box { 
-    background: var(--surface-hover); 
-    padding: 20px; 
-    border-radius: 8px; 
-    border: 1px solid var(--border); 
-    text-align: center; 
-    display: flex; 
-    justify-content: space-around; 
-    align-items: center; 
-    height: 100%; 
+ /* --- NOUVEAU STYLE BORNAGE (2x2) --- */
+
+.bornage-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espace vertical entre les lignes */
+    height: 100%;
+    justify-content: center;
 }
-.bornage-item { 
-    display: block; 
-    font-family: 'Syne', sans-serif; 
-    font-weight: bold; 
-    font-size: 1.1rem; 
-    color: var(--accent); 
-    text-transform: uppercase; 
+
+.bornage-row {
+    display: flex;
+    gap: 15px; /* Espace horizontal entre les blocs */
+    width: 100%;
+}
+
+.bornage-box-item {
+    flex: 1; /* Force les deux blocs à avoir la même largeur */
+    background: var(--surface-hover);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 10px;
+    
+    /* Typographie identique à ton site */
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--accent); /* Ton vert acide */
+    text-transform: uppercase;
+    text-align: center;
+    
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Effet au survol : Bordure verte et fond légèrement plus clair */
+.bornage-box-item:hover {
+    border-color: var(--accent);
+    background: #222; 
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE : Sur mobile, on empile tout */
+@media (max-width: 600px) {
+    .bornage-row {
+        flex-direction: column;
+    }
 }
 
 .btn-pdf { display: inline-block; margin-top: auto; padding: 5px 10px; border: 1px solid var(--accent); color: var(--accent); font-size: 0.8rem; border-radius: 4px; text-decoration: none; }
