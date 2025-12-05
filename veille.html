@@ -76,66 +76,67 @@
             </div>
 
             <div class="card col-12">
-                <h2>Outils de Veille Utilisés</h2>
-                <p style="margin-bottom: 20px; font-size: 0.9rem; color: #888;">(Cliquez sur les images pour voir toutes les captures)</p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                    
-                    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
-                        <h3>1. Google Alerts</h3>
-                        <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Le plus efficace grâce aux nombreux mots clés précis.</p>
-                        <img src="images/google_alerte_logo.png" 
-                             alt="Google Alerts" 
-                             class="tool-img"
-                             onclick="openModal('images/google_1.webp', 'images/google_2.webp', 'images/google_3.webp')">
-                    </div>
+    <h2>Outils de Veille Utilisés</h2>
+    <p style="margin-bottom: 20px; font-size: 0.9rem; color: #888;">(Cliquez sur les images pour voir les détails)</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        
+        <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
+            <h3>1. Google Alerts</h3>
+            <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Le plus efficace grâce aux nombreux mots clés précis.</p>
+            <img src="images/google_alerte_logo.png" 
+                 alt="Google Alerts" 
+                 class="tool-img clickable-img"
+                 onclick="openModal('google')">
+        </div>
 
-                    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
-                        <h3>2. Zotero & Connector</h3>
-                        <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Pratique, automatique, gestion bibliographique et flux RSS.</p>
-                        <img src="images/zotero_logo.webp" 
-                             alt="Zotero" 
-                             class="tool-img"
-                             onclick="openModal('images/zotero_1.webp', 'images/zotero_2.webp', 'images/zotero_3.webp', 'images/zotero_4.webp', 'images/zotero_6.webp', 'images/zotero_5.webp')">
-                    </div>
+        <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
+            <h3>2. Zotero & Connector</h3>
+            <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Pratique, automatique, gestion bibliographique et flux RSS.</p>
+            <img src="images/zotero_logo.webp" 
+                 alt="Zotero" 
+                 class="tool-img clickable-img"
+                 onclick="openModal('zotero')">
+        </div>
 
-                    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
-                        <h3>3. Diigo</h3>
-                        <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Sauvegarder, annoter des pages. Moins complet que Zotero.</p>
-                        <img src="images/diigo_logo.png" 
-                             alt="Diigo" 
-                             class="tool-img"
-                             onclick="openModal('images/diigo_1.png')">
-                    </div>
+        <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
+            <h3>3. Diigo</h3>
+            <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Sauvegarder, annoter des pages. Moins complet que Zotero.</p>
+            <img src="images/diigo_logo.png" 
+                 alt="Diigo" 
+                 class="tool-img clickable-img"
+                 onclick="openModal('diigo')">
+        </div>
 
-                    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
-                        <h3>4. Feedbro</h3>
-                        <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Extension navigateur simple pour suivre des flux RSS.</p>
-                        <img src="images/feedbro_logo.png" 
-                             alt="Feedbro" 
-                             class="tool-img"
-                             onclick="openModal('images/feedbro_1.png')">
-                    </div>
+        <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
+            <h3>4. Feedbro</h3>
+            <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Extension navigateur simple pour suivre des flux RSS.</p>
+            <img src="images/feedbro_logo.png" 
+                 alt="Feedbro" 
+                 class="tool-img clickable-img"
+                 onclick="openModal('feedbro')">
+        </div>
 
-                    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
-                        <h3>5. Feedly</h3>
-                        <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Agrégateur de flux RSS, interface simple.</p>
-                        <img src="images/feedly_logo.png" 
-                             alt="Feedly" 
-                             class="tool-img"
-                             onclick="openModal('images/feedly_1.png', 'images/feedly_2.png')">
-                    </div>
+        <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
+            <h3>5. Feedly</h3>
+            <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Agrégateur de flux RSS, interface simple.</p>
+            <img src="images/feedly_logo.png" 
+                 alt="Feedly" 
+                 class="tool-img clickable-img"
+                 onclick="openModal('feedly')">
+        </div>
 
-                    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
-                        <h3>6. Inoreader</h3>
-                        <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Excellente interface et gestion des flux.</p>
-                        <img src="images/inoreader_logo.jpg" 
-                             alt="Inoreader" 
-                             class="tool-img"
-                             onclick="openModal('images/inoreader_1.jpg')">
-                    </div>
+        <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
+            <h3>6. Inoreader</h3>
+            <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;">Excellente interface et gestion des flux.</p>
+            <img src="images/inoreader_logo.jpg" 
+                 alt="Inoreader" 
+                 class="tool-img clickable-img"
+                 onclick="openModal('inoreader')">
+        </div>
 
-                </div>
-            </div>
+    </div>
+</div>
 
             <div class="card col-12">
                 <h2>Actualités Analysées</h2>

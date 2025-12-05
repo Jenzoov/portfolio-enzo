@@ -328,9 +328,8 @@ h3 {
 .btn-pdf:hover { background: var(--accent); color: #000; }
 .source-link { font-size: 0.8rem; color: #666; text-decoration: underline; margin-left: 10px; }
 
-/* --- 8. MODALES & FENÊTRES POP-UP (COMMUN) --- */
+/* --- 8. MODALES & FENÊTRES POP-UP --- */
 
-/* Fond sombre derrière la modale */
 .modal {
     display: none; 
     position: fixed; 
@@ -339,11 +338,10 @@ h3 {
     width: 100%; height: 100%; 
     background-color: rgba(0,0,0,0.95); 
     backdrop-filter: blur(5px); 
-    overflow: auto; 
-    padding: 50px 20px;
+    overflow-y: auto; 
+    padding: 20px;
 }
 
-/* Bouton fermer (croix) */
 .close { 
     position: fixed; 
     top: 20px; right: 35px; 
@@ -355,22 +353,91 @@ h3 {
 }
 .close:hover { color: var(--accent); }
 
-/* STYLE 1 : Modale GALERIE (Pour veille.html) - Grille d'images */
+/* CONTENU PRINCIPAL DE LA MODALE */
 .modal-content {
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
-    gap: 20px;
-    max-width: 1400px; 
-    margin: auto; 
-    align-items: start; 
-    margin-top: 40px;
+    background-color: #1a1a1a;
+    margin: 5% auto;
+    padding: 40px;
+    border: 1px solid #444;
+    border-radius: 12px;
+    width: 95%;
+    max-width: 1100px; /* Assez large pour le format paysage */
+    position: relative;
+    color: #fff;
 }
 
-.modal-img { 
-    width: 100%; 
-    height: auto; 
-    border-radius: 8px; 
-    border: 1px solid #444; 
+/* En-tête de la modale */
+.modal-header h2 {
+    margin-top: 0;
+    color: var(--accent);
+    font-size: 2rem;
+    border-bottom: none;
+}
+.modal-intro {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+    font-style: italic;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+}
+
+/* LISTE FLEX (Image à gauche, Texte à droite) */
+.modal-body-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.modal-item-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #333;
+}
+.modal-item-flex:last-child { border-bottom: none; }
+
+.modal-img-wrapper {
+    flex: 1 1 50%; /* L'image prend 50% de la largeur */
+}
+.modal-img-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.modal-text-wrapper {
+    flex: 1 1 50%; /* Le texte prend l'autre moitié */
+    align-self: center; /* Centré verticalement */
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+}
+.modal-text-wrapper strong {
+    color: var(--accent);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+/* RESPONSIVE MODALE */
+@media (max-width: 768px) {
+    .modal-item-flex {
+        flex-direction: column; /* Sur mobile, on empile */
+    }
+    .modal-img-wrapper, .modal-text-wrapper {
+        flex: 1 1 100%;
+    }
+}
+/* Style images cliquables (page principale) */
+.clickable-img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.clickable-img:hover {
+    transform: scale(1.05);
 }
 
 /* STYLE 2 : Modale CODE SQL (Pour stage1.html) - Bloc de texte vertical */
