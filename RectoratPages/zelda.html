@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Zelda - Enzo VINCENT</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <div class="nav-links" style="display: flex; align-items: center;">
+                <a href="../index.html">CV / Accueil</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Stage ▾</button>
+                    <div class="dropdown-content">
+                        <a href="../stage1.html">1ère année</a>
+                        <a href="../stage2.html">2ème année</a>
+                    </div>
+                </div>
+                <a href="../veille.html">Veille</a>
+                <div class="dropdown">
+                    <a href="../rectorat.html" class="dropbtn active-drop">Rectorat ▾</a>
+                    <div class="dropdown-content">
+                        <a href="../E5.html">E5</a>
+                        <a href="../E6.html">E6</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Projet <br><span>Zelda</span>.</h1>
+
+        <div class="bento-grid">
+            <div class="card col-12">
+                <h2>Description du Projet</h2>
+                <p>Création d'une application (Wiki) en C# sur le thème de <strong>Zelda Skyward Sword</strong>.</p>
+                <p style="margin-top: 10px; color: #ccc;">
+                    L'application permet de consulter une base de données SQLite contenant des informations sur les personnages, objets, lieux et quêtes du jeu.
+                    Elle a était réalisée en architecture MVVM (Model-View-ViewModel) sous Visual Studio 2026 en équipe de deux.
+                </p>
+                <div style="margin-top: 20px;">
+                    <span class="std-badge">C#</span>
+                    <span class="std-badge">.NET</span>
+                    <span class="std-badge">Visual Studio 2026</span>
+                    <span class="std-badge">SQLite</span>
+                    <span class="std-badge">Git/GitHub</span>
+                    <span class="std-badge">MVVM</span>
+                    <span class="std-badge">Android Studio</span>
+                </div>
+            </div>
+
+            <div class="card col-12">
+                <h2>Travail Réalisé</h2>
+                <div style="display: grid; grid-template-columns: 1fr; gap: 40px;">
+                    
+                    <div>
+                        <h3 style="color: #fff; border-bottom: 1px solid #333; padding-bottom: 10px;">1. Centralisation du code (GitHub)</h3>
+                        <img src="../images/GitHub_Zelda.png" alt="Interface GitHub" class="project-img">
+                    </div>
+
+                    <div style="text-align: center;">
+                        <h3 style="color: #fff; border-bottom: 1px solid #333; padding-bottom: 10px; text-align: left;">2. Architecture MVVM</h3>
+                        <p style="text-align: left; color: #888; margin-top: 10px;">Organisation du code pour séparer la Vue de la Logique.</p>
+                        <img src="../images/structure_zelda.png" alt="Structure du projet" class="mobile-screenshot">
+                    </div>
+
+                    <div>
+                        <h3 style="color: #fff; border-bottom: 1px solid #333; padding-bottom: 10px;">3. Base de données (SQLite)</h3>
+                        <img src="../images/database_zelda.png" alt="Base de données Zelda" class="project-img">
+                    </div>
+
+                    <div>
+                        <h3 style="color: #fff; border-bottom: 1px solid #333; padding-bottom: 10px;">4. Rendu sur Android</h3>
+                        <p style="color: #888; margin-top: 10px;">L'application finale permet de naviguer entre l'accueil, la liste et les détails.</p>
+                        
+                        <div class="mobile-gallery">
+                            <img src="../images/pageAccueil_zelda.png" alt="Accueil" class="mobile-screenshot">
+                            <img src="../images/personnages_zelda.png" alt="Liste Personnages" class="mobile-screenshot">
+                            <img src="../images/detail_zelda.png" alt="Détail Personnage" class="mobile-screenshot">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card col-12">
+                <h2>Compétences Validées</h2>
+                <ul style="list-style: none; margin-top: 15px;">
+                    <li style="margin-bottom: 15px;">
+                        <span class="comp-badge">B1.1</span> <strong>Gérer le patrimoine informatique</strong><br>
+                        <span style="font-size: 0.9rem; color: #888;">Exploiter des références, normes et standards.</span>
+                    </li>
+                    <li style="margin-bottom: 15px;">
+                        <span class="comp-badge">B1.4</span> <strong>Travailler en mode projet</strong><br>
+                        <span style="font-size: 0.9rem; color: #888;">Analyser les objectifs et les modalités d’organisation d’un projet</span>
+                    </li>
+                    <li>
+                        <span class="comp-badge">B1.5</span> <strong>Mettre à disposition des utilisateurs un service informatique</strong><br>
+                        <span style="font-size: 0.9rem; color: #888;">Réaliser les tests d’intégration et d’acceptation d’un service</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>© 2025 Enzo VINCENT - Portfolio</footer>
+</body>
+</html>

@@ -689,3 +689,32 @@ footer { text-align: center; padding: 40px; border-top: 1px solid var(--border);
         margin-top: 20px;
     }
 }
+
+/* --- STYLE PROJET ZELDA --- */
+
+/* L'image format téléphone */
+.mobile-screenshot {
+    display: block;
+    width: 100%;
+    max-width: 280px; /* Taille idéale pour un rendu téléphone */
+    height: auto;
+    border-radius: 16px; /* Coins bien arrondis comme un smartphone */
+    border: 2px solid #333;
+    margin: 20px auto; /* "auto" permet de CENTRER l'image seule */
+    transition: transform 0.3s ease, border-color 0.3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.mobile-screenshot:hover {
+    transform: scale(1.05); /* Petit zoom au survol */
+    border-color: var(--accent);
+}
+
+/* Le conteneur pour mettre les 3 images côte à côte */
+.mobile-gallery {
+    display: flex;
+    justify-content: center; /* Centre le groupe d'images */
+    gap: 30px; /* Espace entre les images */
+    flex-wrap: wrap; /* Passe à la ligne sur petit écran */
+    margin-top: 20px;
+}
