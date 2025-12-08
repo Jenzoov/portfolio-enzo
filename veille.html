@@ -452,27 +452,51 @@
 
                 </div>
             </div>
-            <div class="card col-12" style="background: var(--surface-hover);">
-                <h2>Mise en application</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: center;">
-                    
-                    <div style="background: #111; padding: 20px; border-radius: 8px; border: 1px solid #333;">
-                        <strong style="color: var(--accent); font-size: 1.5rem; display: block; margin-bottom: 10px;">1. Création</strong>
-                        <p style="color: #ccc;">Développement de programmes algorithmiques identiques en <strong>C, Python et JavaScript</strong>.</p>
+                <div class="card col-12" style="background: var(--surface-hover);">
+                    <h2>Mise en Applications : Performance .NET 10</h2>
+                    <p style="margin-bottom: 20px; color: #ccc;">
+                        Suite à l'annonce des optimisations du JIT et du Garbage Collector (News n°16), j'ai mesuré l'impact réel sur un code de calcul matriciel intensif en comparant deux versions du runtime.
+                    </p>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; justify-content: center;">
+                        
+                        <div style="flex: 1; min-width: 300px; text-align: center;">
+                            <p style="margin-bottom: 10px; color: #aaa; font-size: 0.9rem;">Environnement Standard (.NET 8)</p>
+                            <img src="images/NET8.png" 
+                                alt="Résultat Benchmark .NET 8" 
+                                style="width: 100%; border-radius: 8px; border: 1px solid #444; box-shadow: 0 4px 15px rgba(255, 0, 0, 0.507);">
+                            <p style="margin-top: 5px; color: #ff6b6b; font-weight: bold;">⏱️ 19406 ms</p>
+                        </div>
+
+                        <div style="flex: 1; min-width: 300px; text-align: center;">
+                            <p style="margin-bottom: 10px; color: #aaa; font-size: 0.9rem;">Environnement Optimisé (.NET 10)</p>
+                            <img src="images/NET10.png" 
+                                alt="Résultat Benchmark .NET 10" 
+                                style="width: 100%; border-radius: 8px; border: 1px solid #444; box-shadow: 0 4px 15px rgba(0, 255, 102, 0.548);">
+                            <p style="margin-top: 5px; color: #51cf66; font-weight: bold;">🚀 7814 ms (x2.5 plus rapide)</p>
+                        </div>
+
                     </div>
 
-                    <div style="background: #111; padding: 20px; border-radius: 8px; border: 1px solid #333;">
-                        <strong style="color: var(--accent); font-size: 1.5rem; display: block; margin-bottom: 10px;">2. Analyse</strong>
-                        <p style="color: #ccc;">Mesure et comparaison du <strong>temps d'exécution</strong> et de la <strong>consommation mémoire</strong>.</p>
-                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: center; border-top: 1px solid #333; padding-top: 20px;">
+                        
+                        <div>
+                            <strong style="color: var(--accent); font-size: 1.2rem; display: block; margin-bottom: 5px;">Protocole</strong>
+                            <p style="color: #ccc; font-size: 0.9rem;">Multiplication de matrices 1000x1000 (1M éléments). Code strictement identique, seul le Framework Cible change.</p>
+                        </div>
 
-                    <div style="background: #111; padding: 20px; border-radius: 8px; border: 1px solid #333;">
-                        <strong style="color: var(--accent); font-size: 1.5rem; display: block; margin-bottom: 10px;">3. Conclusion</strong>
-                        <p style="color: #ccc;">Vérification de la pertinence de chaque langage selon les contraintes (Vitesse vs Facilité).</p>
-                    </div>
+                        <div>
+                            <strong style="color: var(--accent); font-size: 1.2rem; display: block; margin-bottom: 5px;">Analyse</strong>
+                            <p style="color: #ccc; font-size: 0.9rem;">Le nouveau JIT de .NET 10 optimise mieux les boucles imbriquées (Loop Unrolling) et l'allocation mémoire.</p>
+                        </div>
 
+                        <div>
+                            <strong style="color: var(--accent); font-size: 1.2rem; display: block; margin-bottom: 5px;">Conclusion</strong>
+                            <p style="color: #ccc; font-size: 0.9rem;">Gain de près de <strong>60%</strong>. Valide l'intérêt de maintenir l'infrastructure serveur à jour.</p>
+                        </div>
+
+                    </div>
                 </div>
-            </div>
         </div>
     </div>
 

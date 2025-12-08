@@ -4,21 +4,20 @@ const toolsData = {
         title: "Google Alerts",
         intro: "Mon outil principal pour la veille passive sur des mots-clés précis.",
         images: [
-            { src: 'images/google_1.webp', desc: "<strong>Configuration :</strong> Je définis ici mes mots-clés stratégiques (ex: 'faille zero-day', 'Rust vs C++')." },
+            { src: 'images/google_1.webp', desc: "<strong>Configuration :</strong> Je définis ici mes mots-clés stratégiques (ex: 'JavaScript', 'Rust vs C++')." },
             { src: 'images/google_2.webp', desc: "<strong>Réception :</strong> Je reçois un condensé quotidien par email, ce qui m'évite de chercher l'info manuellement." },
-            { src: 'images/google_3.webp', desc: "<strong>Filtrage :</strong> Je limite les résultats aux blogs et actualités pour éviter le bruit des forums." }
+            { src: 'images/google_3.webp', desc: "<strong>Exemple :</strong> Email d'exemple de réception de news." }
         ],
         rex: "Google Alerts est très rapide à installer et est très pratique mais donne des sources pas toujours fiables et recherche exactement le mot saisi."
     },
     'zotero': {
         title: "Zotero & Connector",
-        intro: "Ma base de connaissances pour archiver et classer les articles techniques.",
+        intro: "L'outil le plus complet disposant d'une extension.",
         images: [
-            { src: 'images/zotero_1.webp', desc: "<strong>Bibliothèque :</strong> Vue d'ensemble de ma base, classée par thématiques (IA, Sécurité, Langages)." },
-            { src: 'images/zotero_2.webp', desc: "<strong>Connector :</strong> Un clic dans le navigateur suffit pour enregistrer un article intéressant." },
-            { src: 'images/zotero_3.webp', desc: "<strong>Tags :</strong> J'utilise des tags pour retrouver facilement les articles (ex: 'Important', 'A lire')." },
-            { src: 'images/zotero_4.webp', desc: "<strong>Notes :</strong> Ajout de notes personnelles directement liées aux sources." },
-            { src: 'images/zotero_6.webp', desc: "<strong>Archivage :</strong> Zotero garde une copie (snapshot) de la page web au cas où elle disparaîtrait." }
+            { src: 'images/zotero_2.webp', desc: "<strong>Flux RSS :</strong> Récupération d'un flux RSS en bas d'un site web ." },
+            { src: 'images/zotero_1.webp', desc: "<strong>Bibliothèque :</strong> Ajout d'une bibliothèque via l'URL d'un flux RSS." },
+            { src: 'images/zotero_3.webp', desc: "<strong>Résultat :</strong> Toutes les news disponible grâve au flux RSS." },
+            { src: 'images/zotero_4.webp', desc: "<strong>Zotero Connector :</strong> Avec l'extension je peux rajouter des articles intéressant dans Zotero directement depuis le navigateur." }
         ],
         rex: "Zotero offre la possibilité d'ajouter des notes et des tags, ce qui m'aide à structurer mes lectures et à retrouver rapidement l'information pertinente. L'utilisation d'un flux RSS permet d'alimenter automatiquement ma bibliothèque."
     },
@@ -36,13 +35,13 @@ const toolsData = {
         images: [
             { src: 'images/feedbro_1.png', desc: "<strong>Flux locaux :</strong> Rapide et privé, idéal pour suivre des blogs techniques spécifiques sans créer de compte." }
         ],
-        rex: "Feedbro est une extension permettant de suivre un flux RSS, elle est très rapide à installer et ne néxessite pas de création de compte, mais Zotero reste meilleur et plus complet."
+        rex: "Feedbro est une extension permettant de suivre un flux RSS, elle est très rapide à installer et ne nécessite pas de création de compte, mais Zotero reste meilleur et plus complet."
     },
     'feedly': {
         title: "Feedly",
-        intro: "Mon agrégateur RSS principal sur mobile et desktop.",
+        intro: "Agrégateur RSS sur mobile et desktop.",
         images: [
-            { src: 'images/feedly_1.png', desc: "<strong>Tableau de bord :</strong> Vue synthétique des articles populaires du jour." },
+            { src: 'images/feedly_1.png', desc: "<strong>Sources :</strong> Permet de suivre des sources proposées." },
             { src: 'images/feedly_2.png', desc: "<strong>Lecture :</strong> Interface épurée facilitant la lecture rapide des news." }
         ],
         rex: "Feedly permet de centraliser ma veille sur une seule plateforme accessible partout mais il ne fait pas mieux que Zotero qui est plus complet."
