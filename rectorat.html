@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rectorat - Enzo VINCENT</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles spécifiques pour cette mise en page */
+        .comp-title a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px dotted var(--accent);
+            transition: 0.3s;
+        }
+        .comp-title a:hover {
+            color: var(--accent);
+            border-bottom: 1px solid var(--accent);
+        }
+        .task-list li {
+            color: #ccc;
+            font-weight: 500;
+        }
+        
+        /* Style du descriptif de projet */
+        .project-desc {
+            color: #999;
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #333;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
 
@@ -38,175 +67,377 @@
 
     <div class="container">
         <h1 class="page-title">Synthèse <br><span>Rectorat</span>.</h1>
-        <p style="margin-bottom: 40px; color: #888; font-size: 1.1rem;">Synthèse des réalisations professionnelles au cours de la formation.</p>
+        <p style="margin-bottom: 40px; color: #888; font-size: 1.1rem;">Détail des compétences du Bloc 1 validées pour chaque projet et activité.</p>
 
         <div class="bento-grid">
             
             <div class="card col-12">
                 <div class="comp-header">
-                    <span class="comp-code">B1.1</span>
-                    <span class="comp-title">Gérer le patrimoine informatique</span>
+                    <span class="comp-title"><a href="RectoratPages/powerBIStage.html">Stage : Power BI</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">Mai - Juin 2025</span>
                 </div>
+                
+                <p class="project-desc">
+                    Conception et déploiement d'un tableau de bord interactif pour le suivi des flux de déchets, connectant Power BI à une base de données existante.
+                </p>
 
                 <div class="task-group">
-                    <span class="task-title">▸Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</span>
+                    <span class="comp-code">B1.1 Gérer le patrimoine informatique</span>
                     <ul class="task-list">
-                        <li>👉 <strong><a href="RectoratPages/TPw3c.html">Utilisation de W3C</a></strong> : Validation HTML/CSS. Production de pages validées (Sept 2024).</li>
-                        <li>👉 <strong><a href="RectoratPages/TP1html.html">Première page HTML</a></strong> : Respect des standards web.</li>
-                        <li>👉 <strong><a href="RectoratPages/conventionNommageCSHARP.html">Convention de nommage C#</a></strong> : Application "Morpion" en console (Nov 2024).</li>
-                        <li>👉 <strong><a href="RectoratPages/cybernews.html">Cybernews</a></strong> : Site de veille dynamique PHP/BDD (Oct 24 - Juin 25).</li>
-                        <li>👉 <strong><a href="RectoratPages/powerBIStage.html">Power BI (Stage)</a></strong> : Création de vues SQL respectant les normes de l'entreprise (Mai-Juin 2025).</li>
-                        <li>👉 <strong><a href="RectoratPages/zelda.html">Appli Zelda</a></strong> : Création d'une application C# sur Zelda</li>
+                        <li>👉 Recenser et identifier les ressources numériques</li>
+                        <li>👉 Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</li>
                     </ul>
                 </div>
-
                 <div class="task-group">
-                    <span class="task-title">▸Mettre en place et vérifier les niveaux d’habilitation associés à un service</span>
+                    <span class="comp-code">B1.4 Travailler en mode projet</span>
                     <ul class="task-list">
-                        <li>👉 <strong><a href="RectoratPages/revokeGrant.html">SQL LCD (REVOKE/GRANT)</a></strong> : Création de comptes utilisateurs et droits de gestion (Fév-Mars 2025).</li>
+                        <li>👉 Planifier les activités</li>
+                        <li>👉 Évaluer les indicateurs de suivi d’un projet et analyser les écarts</li>
                     </ul>
                 </div>
-
                 <div class="task-group">
-                    <span class="task-title">▸Recenser et identifier les ressources numériques</span>
+                    <span class="comp-code">B1.5 Mettre à disposition des utilisateurs un service informatique</span>
                     <ul class="task-list">
-                        <li>👉 <strong><a href="RectoratPages/RecoJeux.html">Site Web en équipe</a></strong> : Projet statique puis dynamique avec hébergement (Nov 24 - Janv 25).</li>
-                        <li>👉 <strong><a href="RectoratPages/powerBIStage.html">Power BI (Stage)</a></strong> : Prise en main de l'environnement et du matériel (Mai-Juin 2025).</li>
+                        <li>👉 Déployer un service</li>
+                        <li>👉 Accompagner les utilisateurs dans la mise en place d’un service</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="card col-12">
+            <div class="card col-6">
                 <div class="comp-header">
-                    <span class="comp-code">B1.2</span>
-                    <span class="comp-title">Répondre aux incidents et aux demandes d’assistance et d’évolution</span>
+                    <span class="comp-title"><a href="RectoratPages/cybernews.html">Cybernews</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">Oct 24 - Juin 25</span>
                 </div>
 
+                <p class="project-desc">
+                    Développement d'une plateforme Web dynamique (PHP/MySQL) dédiée à la veille technologique sur la cybersécurité.
+                </p>
+
                 <div class="task-group">
-                    <span class="task-title">▸Collecter, suivre et orienter des demandes</span>
+                    <span class="comp-code">B1.1 Gérer le patrimoine informatique</span>
                     <ul class="task-list">
-                        <li>👉 <strong><a href="RectoratPages/GLPI.html">GLPI</a></strong> : Installation LAMP, test Apache, création et suivi de tickets (Mars 2025).</li>
+                        <li>👉 Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</li>
                     </ul>
                 </div>
-
                 <div class="task-group">
-                    <span class="task-title">▸Traiter des demandes concernant les services réseau et système applicatifs</span>
+                    <span class="comp-code">B1.3 Développer la présence en ligne de l’organisation</span>
                     <ul class="task-list">
-                        <li>👉 <strong><a href="RectoratPages/powerBIStage.html">Power BI (Stage)</a></strong> : Réunions et mise au point selon les demandes (Mai-Juin 2025).</li>
+                        <li>👉 Participer à l’évolution d’un site Web exploitant les données de l’organisation</li>
+                    </ul>
+                </div>
+                <div class="task-group">
+                    <span class="comp-code">B1.6 Organiser son développement professionnel</span>
+                    <ul class="task-list">
+                        <li>👉 Mettre en œuvre des outils et stratégies de veille informationnelle</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="card col-12">
+            <div class="card col-6">
                 <div class="comp-header">
-                    <span class="comp-code">B1.3</span>
-                    <span class="comp-title">Développer la présence en ligne de l’organisation</span>
+                    <span class="comp-title"><a href="RectoratPages/RecoJeux.html">Site Web en Équipe (RecoJeux)</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">Nov 24 - Janv 25</span>
                 </div>
 
+                <p class="project-desc">
+                    Projet collaboratif de création de site vitrine complet, de la maquette à l'hébergement, avec répartition des tâches sur Trello.
+                </p>
+
                 <div class="task-group">
-                    <span class="task-title">▸Participer à l’évolution d’un site Web exploitant les données de l’organisation</span>
+                    <span class="comp-code">B1.1 Gérer le patrimoine informatique</span>
                     <ul class="task-list">
-                        <li>👉 <strong><a href="RectoratPages/cybernews.html">Cybernews</a></strong> : Création et amélioration continue (PHP/BDD), dynamisation du menu (Oct 24 - Juin 25).</li>
-                        <li>👉 <strong><a href="RectoratPages/RecoJeux.html">Site Web en équipe</a></strong> : Site statique puis dynamique hébergé en ligne (Nov 24 - Janv 25).</li>
+                        <li>👉 Recenser et identifier les ressources numériques</li>
+                    </ul>
+                </div>
+                <div class="task-group">
+                    <span class="comp-code">B1.3 Développer la présence en ligne de l’organisation</span>
+                    <ul class="task-list">
+                        <li>👉 Participer à l’évolution d’un site Web exploitant les données de l’organisation</li>
+                    </ul>
+                </div>
+                <div class="task-group">
+                    <span class="comp-code">B1.4 Travailler en mode projet</span>
+                    <ul class="task-list">
+                        <li>👉 Planifier les activités</li>
+                    </ul>
+                </div>
+                <div class="task-group">
+                    <span class="comp-code">B1.5 Mettre à disposition des utilisateurs un service informatique</span>
+                    <ul class="task-list">
+                        <li>👉 Déployer un service</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="card col-12">
+            <div class="card col-6">
                 <div class="comp-header">
-                    <span class="comp-code">B1.4</span>
-                    <span class="comp-title">Travailler en mode projet</span>
+                    <span class="comp-title"><a href="RectoratPages/zelda.html">Appli C# : Zelda</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">Projet de développement</span>
                 </div>
 
+                <p class="project-desc">
+                    Conception d'une application en C# pour la gestion de données liées à l'univers du jeu.
+                </p>
+
                 <div class="task-group">
-                    <span class="task-title">▸Analyser les objectifs et les modalités d’organisation d’un projet</span>
+                    <span class="comp-code">B1.1 Gérer le patrimoine informatique</span>
                     <ul class="task-list">
-                        <li>👉 <strong><a href="RectoratPages/zelda.html">Appli Zelda</a></strong> : Création d'une application C# sur Zelda</li>
+                        <li>👉 Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</li>
                     </ul>
                 </div>
-
                 <div class="task-group">
-                    <span class="task-title">▸Planifier les activités</span>
+                    <span class="comp-code">B1.4 Travailler en mode projet</span>
                     <ul class="task-list">
-                        <li>👉 <strong><a href="RectoratPages/RecoJeux.html">Site Web en équipe</a></strong> : Utilisation de Trello, répartition des tâches, délais (Nov 24 - Janv 25).</li>
-                        <li>👉 <strong><a href="RectoratPages/powerBIStage.html">Power BI (Stage)</a></strong> : Diagramme de Gantt prévisionnel (Mai-Juin 2025).</li>
+                        <li>👉 Analyser les objectifs et les modalités d’organisation d’un projet</li>
                     </ul>
                 </div>
-
                 <div class="task-group">
-                    <span class="task-title">▸Évaluer les indicateurs de suivi d’un projet et analyser les écarts</span>
+                    <span class="comp-code">B1.5 Mettre à disposition des utilisateurs un service informatique</span>
                     <ul class="task-list">
-                        <li>👉 <strong><a href="RectoratPages/powerBIStage.html">Power BI (Stage)</a></strong> : Vérification quotidienne de l'avancement (Mai-Juin 2025).</li>
+                        <li>👉 Réaliser les tests d’intégration et d’acceptation d’un service</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="card col-12">
+            <div class="card col-6">
                 <div class="comp-header">
-                    <span class="comp-code">B1.5</span>
-                    <span class="comp-title">Mettre à disposition des utilisateurs un service informatique</span>
+                    <span class="comp-title"><a href="RectoratPages/GLPI.html">TP : GLPI</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">Mars 2025</span>
                 </div>
 
-                <div class="task-group">
-                    <span class="task-title">▸Réaliser les tests d’intégration et d’acceptation d’un service</span>
-                    <ul class="task-list">
-                        <li>👉 <strong><a href="RectoratPages/zelda.html">Appli Zelda</a></strong> : Création d'une application C# sur Zelda</li>
-                    </ul>
-                </div>
+                <p class="project-desc">
+                    Installation de GLPI et création / suivi de tickets.
+                </p>
 
                 <div class="task-group">
-                    <span class="task-title">▸Déployer un service</span>
+                    <span class="comp-code">B1.2 Répondre aux incidents et aux demandes d’assistance et d’évolution</span>
                     <ul class="task-list">
-                        <li>👉 <strong><a href="RectoratPages/RecoJeux.html">Site Web en équipe</a></strong> : Hébergement en ligne.</li>
-                        <li>👉 <strong><a href="RectoratPages/TPHebergerSite.html">TP Déployer un service</a></strong> : Hébergement d'un site (Mars 2025).</li>
-                        <li>👉 <strong><a href="RectoratPages/powerBIStage.html">Power BI (Stage)</a></strong> : Déploiement du Dashboard aux utilisateurs (Juin 2025).</li>
-                    </ul>
-                </div>
-
-                <div class="task-group">
-                    <span class="task-title">▸Accompagner les utilisateurs dans la mise en place d’un service</span>
-                    <ul class="task-list">
-                        <li>👉 <strong><a href="RectoratPages/powerBIStage.html">Power BI (Stage)</a></strong> : Formation des utilisateurs aux filtres et pages du rapport.</li>
+                        <li>👉 Collecter, suivre et orienter des demandes</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="card col-12">
+            <div class="card col-6">
                 <div class="comp-header">
-                    <span class="comp-code">B1.6</span>
-                    <span class="comp-title">Organiser son développement professionnel</span>
+                    <span class="comp-title"><a href="RectoratPages/revokeGrant.html">TP : SQL & Habilitations</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">Fév - Mars 2025</span>
                 </div>
 
-                <div class="task-group">
-                    <span class="task-title">▸Mettre en place son environnement d’apprentissage personnel</span>
-                    <ul class="task-list">
-                        <li>👉 <strong><a href="RectoratPages/PIX.html">Pix</a></strong> : 500 points.</li>
-                        <li>👉 <strong><a href="RectoratPages/MOOC_ANSSI.html">MOOC ANSSI</a></strong> : 4 modules validés.</li>
-                        <li>👉 <strong><a href="RectoratPages/RGPD.html">RGPD</a></strong> : 1 à 5 modules validés.</li>
-                    </ul>
-                </div>
+                <p class="project-desc">
+                    Administration de base de données : création d'utilisateurs et gestion fine des privilèges (REVOKE/GRANT).
+                </p>
 
                 <div class="task-group">
-                    <span class="task-title">▸Développer son projet professionnel</span>
+                    <span class="comp-code">B1.1 Gérer le patrimoine informatique</span>
                     <ul class="task-list">
-                        <li>👉 <strong><a href="RectoratPages/LinkedIn.html">Création de compte LinkedIn</a></strong></li>
-                        <li>👉 <strong><a href="RectoratPages/etudeReferentiel.html">Étude du référentiel</a></strong></li>
-                        <li>👉 <strong><a href="RectoratPages/ficheMetier.html">Fiche métier</a></strong></li>
-                        <li>👉 <strong><a href="RectoratPages/sanctionEntreprise.html">Étude de documents sur les sanctions d'entreprise</a></strong></li>
-                    </ul>
-                </div>
-                <div class="task-group">
-                    <span class="task-title">▸Mettre en oeuvre des outils et stratégies de veille informationnelle</span>
-                    <ul class="task-list">
-                        <li>👉 <strong><a href="RectoratPages/Veille_Techno.html">Veille Tech</a></strong> : Diaporama (Bornage, Outils, News, Application).</li>
-                        <li>👉 <strong><a href="RectoratPages/cybernews.html">Cybernews</a></strong> : Site de veille dynamique mis à jour mensuellement.</li>
+                        <li>👉 Mettre en place et vérifier les niveaux d’habilitation associés à un service</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="card col-12" style="background: var(--surface-hover); text-align: center;">
+            <div class="card col-6">
+                <div class="comp-header">
+                    <span class="comp-title"><a href="RectoratPages/TPHebergerSite.html">TP : Déployer un service</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">Mars 2025</span>
+                </div>
+
+                <p class="project-desc">
+                    Mise en production d'un site web via transfert de fichiers vers un hébergeur distant.
+                </p>
+
+                <div class="task-group">
+                    <span class="comp-code">B1.5 Mettre à disposition des utilisateurs un service informatique</span>
+                    <ul class="task-list">
+                        <li>👉 Déployer un service</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card col-6">
+                <div class="comp-header">
+                    <span class="comp-title"><a href="RectoratPages/conventionNommageCSHARP.html">App : Morpion Console</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">Nov 2024</span>
+                </div>
+
+                <p class="project-desc">
+                    Développement d'un jeu en console C# avec application stricte des conventions de nommage.
+                </p>
+
+                <div class="task-group">
+                    <span class="comp-code">B1.1 Gérer le patrimoine informatique</span>
+                    <ul class="task-list">
+                        <li>👉 Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card col-6">
+                <div class="comp-header">
+                    <span class="comp-title"><a href="RectoratPages/TPw3c.html">Validation W3C</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">Sept 2024</span>
+                </div>
+
+                <p class="project-desc">
+                    Correction et mise en conformité du code HTML/CSS selon les standards officiels du W3C.
+                </p>
+
+                <div class="task-group">
+                    <span class="comp-code">B1.1 Gérer le patrimoine informatique</span>
+                    <ul class="task-list">
+                        <li>👉 Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card col-6">
+                <div class="comp-header">
+                    <span class="comp-title"><a href="RectoratPages/TP1html.html">TP : Première page HTML</a></span>
+                </div>
+
+                <p class="project-desc">
+                    Apprentissage de la structure sémantique Web et des bonnes pratiques d'intégration.
+                </p>
+
+                <div class="task-group">
+                    <span class="comp-code">B1.1 Gérer le patrimoine informatique</span>
+                    <ul class="task-list">
+                        <li>👉 Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card col-6">
+                <div class="comp-header">
+                    <span class="comp-title"><a href="RectoratPages/PIX.html">Pix</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">Score : 500 pts</span>
+                </div>
+                <p class="project-desc">
+                    Validation des compétences numériques transversales via la plateforme nationale.
+                </p>
+                <div class="task-group">
+                    <span class="comp-code">B1.6 Organiser son développement professionnel</span>
+                    <ul class="task-list">
+                        <li>👉 Mettre en place son environnement d’apprentissage personnel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card col-6">
+                <div class="comp-header">
+                    <span class="comp-title"><a href="RectoratPages/MOOC_ANSSI.html">MOOC ANSSI</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">SecNumAcadémie</span>
+                </div>
+                <p class="project-desc">
+                    Validation de 4 modules de formation sur la sécurité des systèmes d'information.
+                </p>
+                <div class="task-group">
+                    <span class="comp-code">B1.6 Organiser son développement professionnel</span>
+                    <ul class="task-list">
+                        <li>👉 Mettre en place son environnement d’apprentissage personnel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card col-6">
+                <div class="comp-header">
+                    <span class="comp-title"><a href="RectoratPages/RGPD.html">Formation RGPD</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">Modules 1 à 5</span>
+                </div>
+                <p class="project-desc">
+                    Acquisition des connaissances fondamentales sur la protection des données personnelles.
+                </p>
+                <div class="task-group">
+                    <span class="comp-code">B1.6 Organiser son développement professionnel</span>
+                    <ul class="task-list">
+                        <li>👉 Mettre en place son environnement d’apprentissage personnel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card col-6">
+                <div class="comp-header">
+                    <span class="comp-title"><a href="RectoratPages/LinkedIn.html">Identité Numérique</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">Réseau Professionnel</span>
+                </div>
+                <p class="project-desc">
+                    Construction et maintenance de l'identité numérique et de l'e-réputation professionnelle.
+                </p>
+                <div class="task-group">
+                    <span class="comp-code">B1.6 Organiser son développement professionnel</span>
+                    <ul class="task-list">
+                        <li>👉 Gérer son identité professionnelle</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card col-6">
+                <div class="comp-header">
+                    <span class="comp-title"><a href="RectoratPages/etudeReferentiel.html">Étude du Référentiel</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">Cadre BTS SIO</span>
+                </div>
+                <p class="project-desc">
+                    Analyse détaillée des compétences, savoirs et attentes du référentiel de certification.
+                </p>
+                <div class="task-group">
+                    <span class="comp-code">B1.6 Organiser son développement professionnel</span>
+                    <ul class="task-list">
+                        <li>👉 Développer son projet professionnel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card col-6">
+                <div class="comp-header">
+                    <span class="comp-title"><a href="RectoratPages/ficheMetier.html">Fiche Métier</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">Orientation</span>
+                </div>
+                <p class="project-desc">
+                    Recherche approfondie sur deux métiers cibles du secteur informatique (missions, compétences).
+                </p>
+                <div class="task-group">
+                    <span class="comp-code">B1.6 Organiser son développement professionnel</span>
+                    <ul class="task-list">
+                        <li>👉 Développer son projet professionnel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card col-6">
+                <div class="comp-header">
+                    <span class="comp-title"><a href="RectoratPages/sanctionEntreprise.html">Sanctions des entreprises</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">Culture Juridique</span>
+                </div>
+                <p class="project-desc">
+                    Étude de cas et analyse d'un document sur les sanctions juridiques applicables aux entreprises du numérique.
+                </p>
+                <div class="task-group">
+                    <span class="comp-code">B1.6 Organiser son développement professionnel</span>
+                    <ul class="task-list">
+                        <li>👉 Développer son projet professionnel</li>
+                    </ul>
+                </div>
+            </div>
+
+             <div class="card col-6">
+                <div class="comp-header">
+                    <span class="comp-title"><a href="RectoratPages/Veille_Techno.html">Veille Technologique</a></span>
+                    <span class="date" style="display:block; margin-top:5px;">Continu</span>
+                </div>
+                <p class="project-desc">
+                    Processus de curation d'informations (Outils, Bornage, News) sur l'évolution du secteur.
+                </p>
+                <div class="task-group">
+                    <span class="comp-code">B1.6 Organiser son développement professionnel</span>
+                    <ul class="task-list">
+                        <li>👉 Mettre en œuvre des outils et stratégies de veille informationnelle</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card col-12" style="background: var(--surface-hover); text-align: center; display:flex; flex-direction:column; align-items:center; justify-content:center;">
                 <h2>Tableau de Synthèse E4</h2>
-                <a href="pdf/TableauDeSynthese.pdf" target="_blank" class="btn" style="margin-top:10px;">📄 Télécharger le PDF</a>
+                <a href="pdf/TableauDeSynthese.pdf" target="_blank" class="btn" style="margin-top:15px;">📄 Télécharger le PDF</a>
             </div>
 
         </div>
