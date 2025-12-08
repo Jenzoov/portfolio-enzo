@@ -8,7 +8,7 @@ const toolsData = {
             { src: 'images/google_2.webp', desc: "<strong>Réception :</strong> Je reçois un condensé quotidien par email, ce qui m'évite de chercher l'info manuellement." },
             { src: 'images/google_3.webp', desc: "<strong>Filtrage :</strong> Je limite les résultats aux blogs et actualités pour éviter le bruit des forums." }
         ],
-        rex: "Google Alerts m'a permis de découvrir plusieurs articles techniques avant qu'ils ne deviennent viraux, me donnant un avantage dans mes recherches."
+        rex: "Google Alerts est très rapide à installer et est très pratique mais donne des sources pas toujours fiables et recherche exactement le mot saisi."
     },
     'zotero': {
         title: "Zotero & Connector",
@@ -20,7 +20,7 @@ const toolsData = {
             { src: 'images/zotero_4.webp', desc: "<strong>Notes :</strong> Ajout de notes personnelles directement liées aux sources." },
             { src: 'images/zotero_6.webp', desc: "<strong>Archivage :</strong> Zotero garde une copie (snapshot) de la page web au cas où elle disparaîtrait." }
         ],
-        rex: "Zotero est devenu indispensable pour organiser ma veille. La possibilité d'ajouter des notes et des tags m'aide à structurer mes lectures et à retrouver rapidement l'information pertinente."
+        rex: "Zotero offre la possibilité d'ajouter des notes et des tags, ce qui m'aide à structurer mes lectures et à retrouver rapidement l'information pertinente. L'utilisation d'un flux RSS permet d'alimenter automatiquement ma bibliothèque."
     },
     'diigo': {
         title: "Diigo",
@@ -28,7 +28,7 @@ const toolsData = {
         images: [
             { src: 'images/diigo_1.png', desc: "<strong>Annotation :</strong> Je peux surligner du texte et poser des post-it virtuels directement sur les pages web." }
         ],
-        rex: "Diigo m'a permis d'améliorer ma compréhension des articles en annotant directement les passages clés. Le partage de mes annotations avec des collègues a également enrichi nos discussions techniques."
+        rex: "Diigo permet d'annoter directement les passages clés, mais il n'est pas très poussé car c'est une extension."
     },
     'feedbro': {
         title: "Feedbro",
@@ -36,7 +36,7 @@ const toolsData = {
         images: [
             { src: 'images/feedbro_1.png', desc: "<strong>Flux locaux :</strong> Rapide et privé, idéal pour suivre des blogs techniques spécifiques sans créer de compte." }
         ],
-        rex: "Feedbro m'a offert une solution simple et efficace pour suivre mes sources RSS préférées sans dépendre d'un service en ligne. La gestion locale garantit la confidentialité de ma veille."
+        rex: "Feedbro est une extension permettant de suivre un flux RSS, elle est très rapide à installer et ne néxessite pas de création de compte, mais Zotero reste meilleur et plus complet."
     },
     'feedly': {
         title: "Feedly",
@@ -45,7 +45,7 @@ const toolsData = {
             { src: 'images/feedly_1.png', desc: "<strong>Tableau de bord :</strong> Vue synthétique des articles populaires du jour." },
             { src: 'images/feedly_2.png', desc: "<strong>Lecture :</strong> Interface épurée facilitant la lecture rapide des news." }
         ],
-        rex: "Feedly m'a permis de centraliser ma veille sur une seule plateforme accessible partout. La fonctionnalité de découverte d'articles m'aide à trouver de nouvelles sources pertinentes."
+        rex: "Feedly permet de centraliser ma veille sur une seule plateforme accessible partout mais il ne fait pas mieux que Zotero qui est plus complet."
     },
     'inoreader': {
         title: "Inoreader",
