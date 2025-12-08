@@ -133,3 +133,48 @@ window.onclick = function(event) {
         document.body.style.overflow = "auto";
     }
 }
+
+/* --- FONCTION DE TRI DES NEWS --- */
+function sortNews(criteria) {
+    const container = document.getElementById('newsContainer');
+    const items = Array.from(container.getElementsByClassName('news-item'));
+    const buttons = document.querySelectorAll('.btn-sort');
+
+    // 1. Gestion de l'apparence des boutons (Active state)
+    buttons.forEach(btn => btn.classList.remove('active'));
+    // On cible le bouton cliqué pour lui mettre la classe active
+    event.currentTarget.classList.add('active');
+
+    // 2. Logique de tri
+    items.sort((a, b) => {
+        if (criteria === 'default') {
+            // Tri par numéro (ex: "1ère news")
+            const numA = parseInt(a.querySelector('.news-number').innerText);
+            const numB = parseInt(b.querySelector('.news-number').innerText);
+            return numA - numB;
+        } 
+        else if (criteria === 'date') {
+            // Tri par date (ex: "05/03/25")
+            // On extrait la date du texte "Date : 05/03/25 | Source..."
+            const getDate = (el) => {
+                const text = el.querySelector('.news-meta').innerText;
+                const dateStr = text.match(/\d{2}\/\d{2}\/\d{2}/)[0]; // Récupère "dd/mm/yy"
+                const parts = dateStr.split('/');
+                // Crée une date (20 + année, mois - 1, jour)
+                return new Date('20' + parts[2], parts[1] - 1, parts[0]);
+            };
+            // Tri du plus récent au plus ancien (b - a)
+            return getDate(b) - getDate(a);
+        } 
+        else if (criteria === 'category') {
+            // Tri par Bornage (ex: "🛡️ Sécurité & Robustesse")
+            const getCat = (el) => el.querySelector('.bornage').innerText.trim();
+            return getCat(a).localeCompare(getCat(b));
+        }
+    });
+
+    // 3. Réinjection des éléments triés dans le DOM
+    // (Cela déplace les éléments, ça ne les recrée pas, donc c'est performant)
+    container.innerHTML = "";
+    items.forEach(item => container.appendChild(item));
+}

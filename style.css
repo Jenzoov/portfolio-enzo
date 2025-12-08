@@ -750,3 +750,29 @@ footer { text-align: center; padding: 40px; border-top: 1px solid var(--border);
     color: #555;
     font-style: italic; /* Garde l'italique pour le côté "citation/perso" */
 }
+
+/* Style des boutons de tri */
+.btn-sort {
+    background-color: var(--surface-hover, #333);
+    color: #ccc;
+    border: 1px solid #444;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-sort:hover {
+    background-color: var(--primary, #007bff); /* Ou ta couleur d'accent */
+    color: white;
+    border-color: var(--primary, #007bff);
+}
+
+/* Style pour le bouton actif */
+.btn-sort.active {
+    background-color: var(--primary, #51cf66); /* Vert ou ta couleur active */
+    color: white;
+    border-color: transparent;
+    font-weight: bold;
+}

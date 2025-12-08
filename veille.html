@@ -139,319 +139,328 @@
 </div>
 
             <div class="card col-12">
-                <h2>Actualités Analysées</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 30px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 20px; gap: 15px;">
+        <h2 style="margin: 0;">Actualités Analysées</h2>
+        
+        <div class="sort-buttons">
+            <button onclick="sortNews('default', event)" class="btn-sort active">Par Numéro</button>
+            <button onclick="sortNews('date', event)" class="btn-sort">Par Date</button>
+            <button onclick="sortNews('category', event)" class="btn-sort">Par Bornage</button>
+        </div>
+    </div>
 
-                    <div class="news-item">
-                        <span class="news-number">1ère news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 05/03/25 | <strong>Source :</strong> DataScientest<br>
-                            <strong>Auteur :</strong> Gabin Paul<br>
-                            <span class="bornage">🛡️ Sécurité & Robustesse</span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">Le créateur du C++ s'en remet à sa communauté pour sauver son langage</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            Suite à l’importance de la cybersécurité de plus en plus présente, Bjarne Stroustrup du C++ remet en question son langage. Il souhaite que la communauté renforce la sécurité, qui depuis plusieurs années selon les experts en cybersécurité, fait défaut au C++. Le créateur a donc proposé le framework Profiles qui pourrait avoir une meilleure gestion de la mémoire. Malheureusement ce n’est pas la solution miracle car elle divise notamment à cause de la limitation des fonctionnalités que pourrait avoir ce framework et d’autres alternatives ne sont pas à exclure.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_C.pdf" target="_blank" class="btn-pdf">📄 Voir PDF</a>
-                            <a href="https://datascientest.com/le-createur-du-c-sen-remet-a-sa-communaute-pour-sauver-son-langage" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
+    <div id="newsContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 30px;">
 
-                    <div class="news-item">
-                        <span class="news-number">2ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 21/03/25 | <strong>Source :</strong> elektormagazine<br>
-                            <strong>Auteur :</strong> Stuart Cording<br>
-                            <span class="bornage">🏭 Adoption Industrielle</span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">Préparer Rust pour l'aérospatiale et la défense</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            La croissante popularisation de Rust commence à intéresser des domaines comme l’aérospatiale, la défense, le médical ou autre ce qui va mettre de côté le C++ et le C. C’est la sécurité et la gestion de mémoire qui ont permis cela à Rust mais de nombreux clients hésitent à passer à un projet avec Rust.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_Rust_aerospatiale.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://www.elektormagazine.fr/news/preparer-rust-pour-l-aerospatiale-et-la-defense" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-number">3ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 17/04/25 | <strong>Source :</strong> ITdaily<br>
-                            <strong>Auteur :</strong> Katrien Duchène<br>
-                            <span class="bornage">⚡ Écosystème & Outillage</span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">Google Docs prend désormais en charge plusieurs langages (HTML, CSS)</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            Google a décidé d’ajouter le HTML, CSS, C# et bien d’autres, dans la fonction blocs de code dans Google Documents. Il suffit d’aller dans Insérer des éléments de construction -> blocs de code, et de choisir le langage. Cela va aider les développeurs qui utilisent activement Google Docs pour des rédactions techniques ou autres en intégrant du code de manière claire.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_google_docs.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://itdaily.fr/nouvelles/cloud/google-docs-langages-de-programmation/" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-number">4ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 14/04/25 | <strong>Source :</strong> ZDNET<br>
-                            <strong>Auteur :</strong> David Gewirtz<br>
-                            <span class="bornage">🤖 Place de l'IA </span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">Pourquoi Google Code Assist est peut-être l'outil qu'il vous faut</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            Google a revu Google Code Assist et l’a considérablement amélioré notamment dans la compréhension du contexte du code ce qui aide grandement dans la génération de blocs de code. Voici les différentes fonctionnalités améliorées : Migrer le code, Implémenter de nouvelles fonctionnalités depuis GitHub, Effectuer des revues de code, Générer des tests et créer de la documentation.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_google_code.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://www.zdnet.fr/actualites/pourquoi-google-code-assist-est-peut-etre-enfin-loutil-de-programmation-dont-vous-avez-besoin-411996.htm" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-number">5ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 27/05/25 | <strong>Source :</strong> Clubic<br>
-                            <strong>Auteur :</strong> Guillaume Belfiore<br>
-                            <span class="bornage">🏭 Adoption Industrielle</span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">Java fête ses 30 ans, une histoire marquée par le procès Google vs Oracle</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            Java a été créé il y a 30 ans déjà et est aujourd’hui encore un pilier des langages de programmation. L’article aborde le procès entre Oracle et Google, où Oracle accusait Google d’avoir utilisé du code Java sans licence pour développer Android. En 2021, la Cour suprême des États-Unis a tranché en faveur de Google, estimant que cette utilisation relevait du « fair use ». Ce procès a soulevé des questions sur la protection des API par le droit d’auteur.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_Google_Oracle.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://www.clubic.com/actualite-566919-java-fete-ses-30-ans-comment-le-proces-google-vs-oracle-a-change-la-donne.html" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-number">6ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 26/05/25 | <strong>Source :</strong> ZDNET<br>
-                            <strong>Auteur :</strong> Steven Vaughan-Nichols<br>
-                            <span class="bornage">🛡️ Sécurité & Robustesse</span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">Rust a 10 ans : né d'une panne d'ascenseur</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            Rust, le langage de programmation créer par Graydon Hoare a maintenant 10 ans. Hoare a décidé de créé Rust, en 2015, suite à une panne d’ascenseur à cause d’erreurs logicielles, avec une meilleure sécurité et efficacité. Au fil du temps Rust devient de plus en plus apprécié par les développeurs grâce à sa sécurité mémoire.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_Rust-10ans.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://www.zdnet.fr/actualites/rust-a-10-ans-comment-un-ascenseur-casse-a-change-le-logiciel-pour-toujours-476081.htm" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-number">7ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 18/06/25 | <strong>Source :</strong> Programmez!<br>
-                            <strong>Auteur :</strong> Francoistonic<br>
-                            <span class="bornage">⚡ Écosystème & Outillage</span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">Rust vs Go : quel langage pour 2025 ?</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            Rust et Go sont deux langages de programmation en forte croissance. Rust est utilisé par plus de 2,3 millions de développeurs surtout pour sa gestion de mémoire, sa sécurité, pas de data races, langages compilés mais il reste un langage difficile à apprendre. Concernant Go il est plus simple à apprendre et est utile pour le cloud, le web, les IoT, les CLI. Rust est donc à prioriser pour un haut niveau de sécurité et Go pour un développement et déploiement rapides.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_RustvsGO.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://www.programmez.com/actualites/rust-vs-go-quel-langage-pour-2025-37868" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-number">8ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 10/06/25 | <strong>Source :</strong> Korben<br>
-                            <strong>Auteur :</strong> Korben<br>
-                            <span class="bornage">🏭 Adoption Industrielle</span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">Rust débarque enfin dans le noyau Linux</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            Le noyau Linux va intégrer Rust avec la version 6.15 avec l’ajout du premier driver graphique, NOVA développé par Red Hat, écrit en Rust pour les GPU NVIDIA RTX 2000 et +. Il promet d’être plus stable, plus sûr et plus performant. Cette nouvelle est très controversée avec d’un côté les défenseurs de Rust et de l’autre les puristes du C. Rust pourrait réduire jusqu’à 70% des vulnérabilités courantes du noyau.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_RustNoyauLinux.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://korben.info/rust-linux-kernel-nova-nvidia-driver.html" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-number">9ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 25/07/25 | <strong>Source :</strong> GoodTech.info<br>
-                            <strong>Auteur :</strong> GoodTech.info<br>
-                            <span class="bornage">⚡ Écosystème & Outillage</span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">Le développement de PHP 8.5.0 a démarré</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            Une nouvelle version de PHP (la 8.5.0) est en cours de développement et est en phase de test. La 2ème alpha est déjà disponible mais la version finale est prévue pour le 20 novembre. Parmi les nouveautés il y a l’introduction du pipe operator (|>) qui va permettre d’enchaîner plusieurs fonctions de manière lisible, l’ajout de array_first() et array_last() pour le premier et derniers éléments d’un tableau, il y a aussi [NoDiscard] pour qu’une fonction retourne une valeur qui ne doit pas être ignorée.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_PHPnouveaux.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://goodtech.info/php-85-nouveautes-langage-php2025/" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-number">10ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 24/07/25 | <strong>Source :</strong> Linfodrome<br>
-                            <strong>Auteur :</strong> Mominé COULIBALY<br>
-                            <span class="bornage">🤖 Place de l'IA </span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">5 tâches à ne jamais confier à l’IA</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            L’IA prend de plus en plus de place chez les développeurs mais elle reste pour certains cas pas assez efficace, voici 5 tâches concernées : Le manque de raisonnement contextuel / La cybersécurité / Les données sensibles / Optimisation fine / Collaboration humaine. Pour ces raisons ne pas se fier à l’IA dans certains cas est primordial.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_5TacheIA.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://www.linfodrome.com/high-tech/111758-domaine-de-la-programmation-5-taches-a-ne-jamais-confier-a-l-intelligence-artificielle" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-number">11ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 25/08/25 | <strong>Source :</strong> Programmez!<br>
-                            <strong>Auteur :</strong> Francoistonic<br>
-                            <span class="bornage">🤖 Place de l'IA </span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">JetBrains veut créer un nouveau langage</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            JetBrains souhaite créer un nouveau langage de programmation qui n’a pas encore de nom qui a pour but de favoriser l’utilisation de l’IA et le développement multiplateforme. Ce langage serait un dérivé de Kotlin et en anglais.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_JetbrainsNouveau.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://www.programmez.com/actualites/jetbrains-veut-creer-un-nouveau-langage-avec-une-tres-haute-abstraction-38103" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-number">12ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 21/08/25 | <strong>Source :</strong> typescript.developpez<br>
-                            <strong>Auteur :</strong> Stéphane le calme<br>
-                            <span class="bornage">⚡ Écosystème & Outillage</span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">Node.js intègre enfin le support de TypeScript en natif</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            Il est désormais possible d’exécuter et de lire directement les fichiers .ts sans passer par une étape de compilation manuelle. Node.js retire simplement les annotations de types (string, number...) et transforme le code en JavaScript exécutable. C’est ce que l’on appelle le type stripping. Cela rend la création de projets plus rapide et plus facile pour les débutants. Une grande réaction positive a lieu dans la communauté.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_NodejsTypeScript.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://typescript.developpez.com/actu/374878/" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-number">13ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 05/09/25 | <strong>Source :</strong> ITdaily<br>
-                            <strong>Auteur :</strong> Joachim Cruysberghs<br>
-                            <span class="bornage">🏭 Adoption Industrielle</span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">Les progrès de Rust pour les pilotes Windows avancent, mais ne sont pas encore prêts</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            Le développement de pilotes Windows en Rust progresse grâce aux efforts de Microsoft et de la communauté pour renforcer la sécurité mémoire. 
-                            Bien que de nouveaux outils facilitent désormais leur création, ces pilotes ne sont pas encore considérés comme prêts pour une mise en production massive. 
-                            L'intégration continue, notamment dans le noyau de Windows 11 24H2, mais nécessite encore des abstractions de sécurité plus robustes avant d'être généralisée.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_Rust_Windows.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://itdaily.fr/nouvelles/bureau/rust-windows-pas-prets-utilises/" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-number">14ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 08/09/25 | <strong>Source :</strong> Le Monde Informatique<br>
-                            <strong>Auteur :</strong> Dominique Filippone<br>
-                            <span class="bornage">⚡ Écosystème & Outillage</span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">La Fondation Rust dévoile son laboratoire d'innovation</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            La Fondation Rust lance le "Rust Innovation Lab", une nouvelle structure destinée à soutenir le développement des projets open source critiques de l'écosystème Rust. Le premier projet à en bénéficier est <strong>Rustls</strong>, une alternative moderne et sécurisée à OpenSSL. Cette initiative vise à fournir des ressources financières et logistiques pour garantir la pérennité et la sécurité des briques logicielles essentielles écrites en Rust.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_RustInnovation_Lab.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://www.lemondeinformatique.fr/actualites/lire-la-fondation-rust-devoile-son-laboratoire-d-innovation-97812.html" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-number">15ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 05/10/25 | <strong>Source :</strong> Waza Tech<br>
-                            <strong>Auteur :</strong> Actualités des entrepreneurs<br>
-                            <span class="bornage">🤖 Place de l'IA </span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">GitHub Copilot : l'assistant IA qui transforme la programmation</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            Depuis son lancement, GitHub Copilot a révolutionné le quotidien des développeurs en s'appuyant désormais sur le modèle GPT-5 d'OpenAI. Il ne se contente plus de compléter le code, mais agit comme un véritable agent capable de générer des structures applicatives entières et de s'adapter aux règles spécifiques d'un projet. Les études montrent un gain de productivité de 55%, permettant aux développeurs de se concentrer davantage sur la logique métier que sur la syntaxe répétitive.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_GitHub_Copilot.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://waza-tech.com/github-copilot-l-assistant-ia-qui-transforme-la-programmation/" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-number">16ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 09/10/25 | <strong>Source :</strong> Programmez!<br>
-                            <strong>Auteur :</strong> François Tonic<br>
-                            <span class="bornage">⚡ Écosystème & Outillage</span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">.NET 10 : Optimisations majeures du JIT et du code</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            Avec l'arrivée de .NET 10, Microsoft pousse encore plus loin les performances grâce à des centaines d'améliorations dans le compilateur JIT (Just-In-Time) et le Garbage Collector. L'article détaille comment l'inlining intelligent et le PGO (Profile-Guided Optimization) réduisent drastiquement le temps d'exécution et l'allocation mémoire. Ces optimisations montrent que même sur des langages managés comme C#, la maîtrise des couches basses reste cruciale pour la performance.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_NET10.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://www.programmez.com/actualites/net-10-tout-comprendre-des-optimisations-jit-et-dans-le-code-38362" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-number">17ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 04/11/25 | <strong>Source :</strong> CamerNews<br>
-                            <strong>Auteur :</strong> Manu Dibango<br>
-                            <span class="bornage">⚡ Écosystème & Outillage</span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">En 2025, TypeScript détrône Python et devient le langage n°1 sur GitHub</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            Le rapport annuel Octoverse de GitHub révèle un tournant historique : TypeScript est désormais le langage le plus utilisé sur la plateforme, dépassant pour la première fois Python et JavaScript. Cette ascension fulgurante est directement liée à l'essor de l'IA : le typage fort de TypeScript facilite grandement la génération de code fiable par des assistants comme GitHub Copilot, rendant le développement plus robuste et maintenable.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_TypeScript_n1.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://www.camernews.com/en-2025-typescript-simpose-comme-le-langage-de-programmation-prefere-des-developpeurs-sur-github/" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-number">18ème news</span>
-                        <div class="news-meta">
-                            <strong>Date :</strong> 24/11/25 | <strong>Source :</strong> EmarketerZ<br>
-                            <strong>Auteur :</strong> Smaïl<br>
-                            <span class="bornage">⚡ Écosystème & Outillage</span>
-                        </div>
-                        <h3 style="color:#fff; font-size:1.2rem;">PHP 8.5 : Un code plus lisible et un parseur modernisé</h3>
-                        <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
-                            Confirmant les annonces précédentes, cette mise à jour de PHP 8.5 introduit un <strong>nouveau parseur d'URL</strong> conforme aux standards internationaux, remplaçant l'ancienne fonction obsolète pour une meilleure fiabilité des API et du routage. L'article détaille également l'optimisation des fonctions Internet (Curl) et confirme l'arrivée de l'opérateur "Pipe" pour simplifier la syntaxe séquentielle, rendant le code plus fluide et facile à maintenir.
-                        </p>
-                        <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
-                            <a href="pdf/EVI_PHP85.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
-                            <a href="https://www.emarketerz.fr/php-8-5-un-code-plus-lisible-et-un-parseur-modernise/" target="_blank" class="source-link">Voir la source</a>
-                        </div>
-                    </div>
-
-                </div>
+        <div class="news-item">
+            <span class="news-number">1ère news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 05/03/25 | <strong>Source :</strong> DataScientest<br>
+                <strong>Auteur :</strong> Gabin Paul<br>
+                <span class="bornage">🛡️ Sécurité & Robustesse</span>
             </div>
+            <h3 style="color:#fff; font-size:1.2rem;">Le créateur du C++ s'en remet à sa communauté pour sauver son langage</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                Suite à l’importance de la cybersécurité de plus en plus présente, Bjarne Stroustrup du C++ remet en question son langage. Il souhaite que la communauté renforce la sécurité, qui depuis plusieurs années selon les experts en cybersécurité, fait défaut au C++. Le créateur a donc proposé le framework Profiles qui pourrait avoir une meilleure gestion de la mémoire. Malheureusement ce n’est pas la solution miracle car elle divise notamment à cause de la limitation des fonctionnalités que pourrait avoir ce framework et d’autres alternatives ne sont pas à exclure.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_C.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://datascientest.com/le-createur-du-c-sen-remet-a-sa-communaute-pour-sauver-son-langage" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">2ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 21/03/25 | <strong>Source :</strong> elektormagazine<br>
+                <strong>Auteur :</strong> Stuart Cording<br>
+                <span class="bornage">🏭 Adoption Industrielle</span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">Préparer Rust pour l'aérospatiale et la défense</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                La croissante popularisation de Rust commence à intéresser des domaines comme l’aérospatiale, la défense, le médical ou autre ce qui va mettre de côté le C++ et le C. C’est la sécurité et la gestion de mémoire qui ont permis cela à Rust mais de nombreux clients hésitent à passer à un projet avec Rust.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_Rust_aerospatiale.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://www.elektormagazine.fr/news/preparer-rust-pour-l-aerospatiale-et-la-defense" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">3ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 17/04/25 | <strong>Source :</strong> ITdaily<br>
+                <strong>Auteur :</strong> Katrien Duchène<br>
+                <span class="bornage">⚡ Écosystème & Outillage</span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">Google Docs prend désormais en charge plusieurs langages (HTML, CSS)</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                Google a décidé d’ajouter le HTML, CSS, C# et bien d’autres, dans la fonction blocs de code dans Google Documents. Il suffit d’aller dans Insérer des éléments de construction -> blocs de code, et de choisir le langage. Cela va aider les développeurs qui utilisent activement Google Docs pour des rédactions techniques ou autres en intégrant du code de manière claire.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_google_docs.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://itdaily.fr/nouvelles/cloud/google-docs-langages-de-programmation/" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">4ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 14/04/25 | <strong>Source :</strong> ZDNET<br>
+                <strong>Auteur :</strong> David Gewirtz<br>
+                <span class="bornage">🤖 Place de l'IA </span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">Pourquoi Google Code Assist est peut-être l'outil qu'il vous faut</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                Google a revu Google Code Assist et l’a considérablement amélioré notamment dans la compréhension du contexte du code ce qui aide grandement dans la génération de blocs de code. Voici les différentes fonctionnalités améliorées : Migrer le code, Implémenter de nouvelles fonctionnalités depuis GitHub, Effectuer des revues de code, Générer des tests et créer de la documentation.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_google_code.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://www.zdnet.fr/actualites/pourquoi-google-code-assist-est-peut-etre-enfin-loutil-de-programmation-dont-vous-avez-besoin-411996.htm" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">5ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 27/05/25 | <strong>Source :</strong> Clubic<br>
+                <strong>Auteur :</strong> Guillaume Belfiore<br>
+                <span class="bornage">🏭 Adoption Industrielle</span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">Java fête ses 30 ans, une histoire marquée par le procès Google vs Oracle</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                Java a été créé il y a 30 ans déjà et est aujourd’hui encore un pilier des langages de programmation. L’article aborde le procès entre Oracle et Google, où Oracle accusait Google d’avoir utilisé du code Java sans licence pour développer Android. En 2021, la Cour suprême des États-Unis a tranché en faveur de Google, estimant que cette utilisation relevait du « fair use ». Ce procès a soulevé des questions sur la protection des API par le droit d’auteur.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_Google_Oracle.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://www.clubic.com/actualite-566919-java-fete-ses-30-ans-comment-le-proces-google-vs-oracle-a-change-la-donne.html" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">6ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 26/05/25 | <strong>Source :</strong> ZDNET<br>
+                <strong>Auteur :</strong> Steven Vaughan-Nichols<br>
+                <span class="bornage">🛡️ Sécurité & Robustesse</span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">Rust a 10 ans : né d'une panne d'ascenseur</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                Rust, le langage de programmation créer par Graydon Hoare a maintenant 10 ans. Hoare a décidé de créé Rust, en 2015, suite à une panne d’ascenseur à cause d’erreurs logicielles, avec une meilleure sécurité et efficacité. Au fil du temps Rust devient de plus en plus apprécié par les développeurs grâce à sa sécurité mémoire.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_Rust-10ans.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://www.zdnet.fr/actualites/rust-a-10-ans-comment-un-ascenseur-casse-a-change-le-logiciel-pour-toujours-476081.htm" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">7ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 18/06/25 | <strong>Source :</strong> Programmez!<br>
+                <strong>Auteur :</strong> Francoistonic<br>
+                <span class="bornage">⚡ Écosystème & Outillage</span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">Rust vs Go : quel langage pour 2025 ?</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                Rust et Go sont deux langages de programmation en forte croissance. Rust est utilisé par plus de 2,3 millions de développeurs surtout pour sa gestion de mémoire, sa sécurité, pas de data races, langages compilés mais il reste un langage difficile à apprendre. Concernant Go il est plus simple à apprendre et est utile pour le cloud, le web, les IoT, les CLI. Rust est donc à prioriser pour un haut niveau de sécurité et Go pour un développement et déploiement rapides.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_RustvsGO.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://www.programmez.com/actualites/rust-vs-go-quel-langage-pour-2025-37868" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">8ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 10/06/25 | <strong>Source :</strong> Korben<br>
+                <strong>Auteur :</strong> Korben<br>
+                <span class="bornage">🏭 Adoption Industrielle</span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">Rust débarque enfin dans le noyau Linux</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                Le noyau Linux va intégrer Rust avec la version 6.15 avec l’ajout du premier driver graphique, NOVA développé par Red Hat, écrit en Rust pour les GPU NVIDIA RTX 2000 et +. Il promet d’être plus stable, plus sûr et plus performant. Cette nouvelle est très controversée avec d’un côté les défenseurs de Rust et de l’autre les puristes du C. Rust pourrait réduire jusqu’à 70% des vulnérabilités courantes du noyau.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_RustNoyauLinux.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://korben.info/rust-linux-kernel-nova-nvidia-driver.html" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">9ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 25/07/25 | <strong>Source :</strong> GoodTech.info<br>
+                <strong>Auteur :</strong> GoodTech.info<br>
+                <span class="bornage">⚡ Écosystème & Outillage</span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">Le développement de PHP 8.5.0 a démarré</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                Une nouvelle version de PHP (la 8.5.0) est en cours de développement et est en phase de test. La 2ème alpha est déjà disponible mais la version finale est prévue pour le 20 novembre. Parmi les nouveautés il y a l’introduction du pipe operator (|>) qui va permettre d’enchaîner plusieurs fonctions de manière lisible, l’ajout de array_first() et array_last() pour le premier et derniers éléments d’un tableau, il y a aussi [NoDiscard] pour qu’une fonction retourne une valeur qui ne doit pas être ignorée.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_PHPnouveaux.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://goodtech.info/php-85-nouveautes-langage-php2025/" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">10ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 24/07/25 | <strong>Source :</strong> Linfodrome<br>
+                <strong>Auteur :</strong> Mominé COULIBALY<br>
+                <span class="bornage">🤖 Place de l'IA </span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">5 tâches à ne jamais confier à l’IA</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                L’IA prend de plus en plus de place chez les développeurs mais elle reste pour certains cas pas assez efficace, voici 5 tâches concernées : Le manque de raisonnement contextuel / La cybersécurité / Les données sensibles / Optimisation fine / Collaboration humaine. Pour ces raisons ne pas se fier à l’IA dans certains cas est primordial.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_5TacheIA.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://www.linfodrome.com/high-tech/111758-domaine-de-la-programmation-5-taches-a-ne-jamais-confier-a-l-intelligence-artificielle" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">11ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 25/08/25 | <strong>Source :</strong> Programmez!<br>
+                <strong>Auteur :</strong> Francoistonic<br>
+                <span class="bornage">🤖 Place de l'IA </span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">JetBrains veut créer un nouveau langage</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                JetBrains souhaite créer un nouveau langage de programmation qui n’a pas encore de nom qui a pour but de favoriser l’utilisation de l’IA et le développement multiplateforme. Ce langage serait un dérivé de Kotlin et en anglais.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_JetbrainsNouveau.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://www.programmez.com/actualites/jetbrains-veut-creer-un-nouveau-langage-avec-une-tres-haute-abstraction-38103" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">12ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 21/08/25 | <strong>Source :</strong> typescript.developpez<br>
+                <strong>Auteur :</strong> Stéphane le calme<br>
+                <span class="bornage">⚡ Écosystème & Outillage</span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">Node.js intègre enfin le support de TypeScript en natif</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                Il est désormais possible d’exécuter et de lire directement les fichiers .ts sans passer par une étape de compilation manuelle. Node.js retire simplement les annotations de types (string, number...) et transforme le code en JavaScript exécutable. C’est ce que l’on appelle le type stripping. Cela rend la création de projets plus rapide et plus facile pour les débutants. Une grande réaction positive a lieu dans la communauté.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_NodejsTypeScript.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://typescript.developpez.com/actu/374878/" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">13ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 05/09/25 | <strong>Source :</strong> ITdaily<br>
+                <strong>Auteur :</strong> Joachim Cruysberghs<br>
+                <span class="bornage">🏭 Adoption Industrielle</span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">Les progrès de Rust pour les pilotes Windows avancent, mais ne sont pas encore prêts</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                Le développement de pilotes Windows en Rust progresse grâce aux efforts de Microsoft et de la communauté pour renforcer la sécurité mémoire. 
+                Bien que de nouveaux outils facilitent désormais leur création, ces pilotes ne sont pas encore considérés comme prêts pour une mise en production massive. 
+                L'intégration continue, notamment dans le noyau de Windows 11 24H2, mais nécessite encore des abstractions de sécurité plus robustes avant d'être généralisée.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_Rust_Windows.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://itdaily.fr/nouvelles/bureau/rust-windows-pas-prets-utilises/" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">14ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 08/09/25 | <strong>Source :</strong> Le Monde Informatique<br>
+                <strong>Auteur :</strong> Dominique Filippone<br>
+                <span class="bornage">⚡ Écosystème & Outillage</span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">La Fondation Rust dévoile son laboratoire d'innovation</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                La Fondation Rust lance le "Rust Innovation Lab", une nouvelle structure destinée à soutenir le développement des projets open source critiques de l'écosystème Rust. Le premier projet à en bénéficier est <strong>Rustls</strong>, une alternative moderne et sécurisée à OpenSSL. Cette initiative vise à fournir des ressources financières et logistiques pour garantir la pérennité et la sécurité des briques logicielles essentielles écrites en Rust.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_RustInnovation_Lab.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://www.lemondeinformatique.fr/actualites/lire-la-fondation-rust-devoile-son-laboratoire-d-innovation-97812.html" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">15ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 05/10/25 | <strong>Source :</strong> Waza Tech<br>
+                <strong>Auteur :</strong> Actualités des entrepreneurs<br>
+                <span class="bornage">🤖 Place de l'IA </span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">GitHub Copilot : l'assistant IA qui transforme la programmation</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                Depuis son lancement, GitHub Copilot a révolutionné le quotidien des développeurs en s'appuyant désormais sur le modèle GPT-5 d'OpenAI. Il ne se contente plus de compléter le code, mais agit comme un véritable agent capable de générer des structures applicatives entières et de s'adapter aux règles spécifiques d'un projet. Les études montrent un gain de productivité de 55%, permettant aux développeurs de se concentrer davantage sur la logique métier que sur la syntaxe répétitive.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_GitHub_Copilot.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://waza-tech.com/github-copilot-l-assistant-ia-qui-transforme-la-programmation/" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">16ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 09/10/25 | <strong>Source :</strong> Programmez!<br>
+                <strong>Auteur :</strong> François Tonic<br>
+                <span class="bornage">⚡ Écosystème & Outillage</span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">.NET 10 : Optimisations majeures du JIT et du code</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                Avec l'arrivée de .NET 10, Microsoft pousse encore plus loin les performances grâce à des centaines d'améliorations dans le compilateur JIT (Just-In-Time) et le Garbage Collector. L'article détaille comment l'inlining intelligent et le PGO (Profile-Guided Optimization) réduisent drastiquement le temps d'exécution et l'allocation mémoire. Ces optimisations montrent que même sur des langages managés comme C#, la maîtrise des couches basses reste cruciale pour la performance.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_NET10.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://www.programmez.com/actualites/net-10-tout-comprendre-des-optimisations-jit-et-dans-le-code-38362" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">17ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 04/11/25 | <strong>Source :</strong> CamerNews<br>
+                <strong>Auteur :</strong> Manu Dibango<br>
+                <span class="bornage">⚡ Écosystème & Outillage</span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">En 2025, TypeScript détrône Python et devient le langage n°1 sur GitHub</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                Le rapport annuel Octoverse de GitHub révèle un tournant historique : TypeScript est désormais le langage le plus utilisé sur la plateforme, dépassant pour la première fois Python et JavaScript. Cette ascension fulgurante est directement liée à l'essor de l'IA : le typage fort de TypeScript facilite grandement la génération de code fiable par des assistants comme GitHub Copilot, rendant le développement plus robuste et maintenable.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_TypeScript_n1.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://www.camernews.com/en-2025-typescript-simpose-comme-le-langage-de-programmation-prefere-des-developpeurs-sur-github/" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <span class="news-number">18ème news</span>
+            <div class="news-meta">
+                <strong>Date :</strong> 24/11/25 | <strong>Source :</strong> EmarketerZ<br>
+                <strong>Auteur :</strong> Smaïl<br>
+                <span class="bornage">⚡ Écosystème & Outillage</span>
+            </div>
+            <h3 style="color:#fff; font-size:1.2rem;">PHP 8.5 : Un code plus lisible et un parseur modernisé</h3>
+            <p style="font-size:0.9rem; color:#ccc; margin-top: 10px; flex-grow: 1;">
+                Confirmant les annonces précédentes, cette mise à jour de PHP 8.5 introduit un <strong>nouveau parseur d'URL</strong> conforme aux standards internationaux, remplaçant l'ancienne fonction obsolète pour une meilleure fiabilité des API et du routage. L'article détaille également l'optimisation des fonctions Internet (Curl) et confirme l'arrivée de l'opérateur "Pipe" pour simplifier la syntaxe séquentielle, rendant le code plus fluide et facile à maintenir.
+            </p>
+            <div style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <a href="pdf/EVI_PHP85.pdf" target="_blank" class="btn-pdf">📄 PDF</a>
+                <a href="https://www.emarketerz.fr/php-8-5-un-code-plus-lisible-et-un-parseur-modernise/" target="_blank" class="source-link">Voir la source</a>
+            </div>
+        </div>
+
+    </div>
+</div>
                 <div class="card col-12" style="background: var(--surface-hover);">
                     <h2>Mise en Applications : Performance .NET 10</h2>
                     <p style="margin-bottom: 20px; color: #ccc;">
