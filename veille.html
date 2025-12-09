@@ -143,10 +143,17 @@
         <h2 style="margin: 0;">Actualités Analysées</h2>
         
         <div class="sort-buttons">
-            <button onclick="sortNews('default', event)" class="btn-sort active">Par Numéro</button>
-            <button onclick="sortNews('date', event)" class="btn-sort">Par Date</button>
-            <button onclick="sortNews('category', event)" class="btn-sort">Par Bornage</button>
-        </div>
+    <button onclick="sortNews('default', event)" class="btn-sort active">Par Numéro</button>
+    <button onclick="sortNews('date', event)" class="btn-sort">Par Date</button>
+    
+    <select onchange="filterNews(this.value)" class="btn-sort select-filter">
+        <option value="all">Tout afficher</option>
+        <option value="🛡️ Sécurité & Robustesse">🛡️ Sécurité & Robustesse</option>
+        <option value="🤖 Place de l'IA">🤖 Place de l'IA</option>
+        <option value="⚡ Écosystème & Outillage">⚡ Écosystème & Outillage</option>
+        <option value="🏭 Adoption Professionnelle">🏭 Adoption Professionnelle</option>
+    </select>
+</div>
     </div>
 
     <div id="newsContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 30px;">

@@ -178,3 +178,25 @@ function sortNews(criteria) {
     container.innerHTML = "";
     items.forEach(item => container.appendChild(item));
 }
+
+/* --- FONCTION DE FILTRAGE PAR BORNAGE --- */
+function filterNews(category) {
+    const container = document.getElementById('newsContainer');
+    const items = Array.from(container.getElementsByClassName('news-item'));
+
+    items.forEach(item => {
+        // On récupère le texte du bornage (ex: "🛡️ Sécurité...")
+        // .trim() enlève les espaces inutiles au début et à la fin
+        const itemCategory = item.querySelector('.bornage').innerText.trim();
+
+        // LOGIQUE : 
+        // 1. Si on a choisi "all" -> on affiche tout
+        // 2. Sinon, on vérifie si le bornage contient le texte choisi
+        if (category === 'all' || itemCategory.includes(category.trim())) {
+            item.style.display = 'flex'; // Affiche l'élément
+            // On met 'flex' car tes news-item sont définies en flexbox ou grid
+        } else {
+            item.style.display = 'none'; // Cache l'élément
+        }
+    });
+}
