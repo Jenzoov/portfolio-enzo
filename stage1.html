@@ -65,9 +65,9 @@
                 <div style="margin-top: 10px; border-top: 1px solid var(--border); padding-top: 15px;">
                     <p class="date">Types de déchets suivis :</p>
                     <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <span class="badge">Déchet de boudinage</span>
-                        <span class="badge">Déchet technique</span>
-                        <span class="badge">Déchet produit fini</span>
+                        <span class="badge">Déchets de boudinage</span>
+                        <span class="badge">Déchets techniques</span>
+                        <span class="badge">Déchets produits finis</span>
                         <span class="badge">Caoutchouc déclassé</span>
                         <span class="badge">Métaux</span>
                     </div>
@@ -112,7 +112,7 @@
                         <span class="date">Étape 2 : Nettoyage (Talend)</span>
                         <p>Construction du Job ETL :</p>
                         <ul style="font-size: 0.9rem; margin-top: 10px; color: #ccc;">
-                            <li>• <strong>Prejobs :</strong> Connexion BDD + Envoi mail.</li>
+                            <li>• <strong>Prejobs :</strong> Connexion BDD + Envoi d'e-mail.</li>
                             <li>• <strong>tDBinput_1 :</strong> Lecture sources.</li>
                             <li>• <strong>tMap :</strong> Nettoyage et transformation.</li>
                             <li>• <strong>tDBoutput2 :</strong> Injection cible.</li>
@@ -170,7 +170,7 @@
                     <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
                         <span class="date">B1.2 Répondre aux incidents</span>
                         <ul style="list-style: none; font-size: 0.9rem;">
-                            <li>✅ Traiter des demandes concernant les services réseau et système applicatifs</li>
+                            <li>✅ Traiter des demandes concernant les services réseau et systèmes applicatifs</li>
                         </ul>
                     </div>
                     <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px;">
@@ -325,7 +325,7 @@ quantite_dechet_valorise > 0)
  ) unions
 
  WHERE Date_controle > '2025-01-01'
- GROUP BY [site]        --Limité le nombre de lignes
+ GROUP BY [site]        --Limitation du nombre de lignes
 
  , [Date_controle]
  , [article]
