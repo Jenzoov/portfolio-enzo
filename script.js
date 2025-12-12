@@ -200,3 +200,40 @@ function filterNews(category) {
         }
     });
 }
+
+/* ... (Le début de votre fichier script.js reste identique) ... */
+
+/* --- GESTION VUE RECTORAT (Projets vs Compétences) --- */
+function switchView(viewName) {
+    const viewProjects = document.getElementById('view-projects');
+    const viewSkills = document.getElementById('view-skills');
+    const btnProjects = document.getElementById('btn-projects');
+    const btnSkills = document.getElementById('btn-skills');
+    const descText = document.getElementById('desc-text');
+
+    // Vérification de sécurité (si on n'est pas sur la page rectorat)
+    if (!viewProjects || !viewSkills) return;
+
+    // 1. Masquer les deux vues
+    viewProjects.style.display = 'none';
+    viewSkills.style.display = 'none';
+
+    // 2. Réinitialiser les boutons (enlever la classe active)
+    if(btnProjects) btnProjects.classList.remove('active');
+    if(btnSkills) btnSkills.classList.remove('active');
+
+    // 3. Afficher la vue demandée (Grid pour garder la mise en page Bento)
+    document.getElementById('view-' + viewName).style.display = 'grid'; 
+    
+    // 4. Activer le bouton correspondant
+    document.getElementById('btn-' + viewName).classList.add('active');
+
+    // 5. Mettre à jour le petit texte descriptif
+    if(descText) {
+        if(viewName === 'projects') {
+            descText.innerText = "Détail des compétences du Bloc 1 validées pour chaque projet et activité.";
+        } else {
+            descText.innerText = "Répartition des activités et projets par compétence du référentiel BTS SIO.";
+        }
+    }
+}

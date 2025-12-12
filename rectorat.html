@@ -5,95 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rectorat - Enzo VINCENT</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* --- STYLES SPÉCIFIQUES --- */
-        .comp-title a {
-            color: #fff;
-            text-decoration: none;
-            border-bottom: 1px dotted var(--accent);
-            transition: 0.3s;
-        }
-        .comp-title a:hover {
-            color: var(--accent);
-            border-bottom: 1px solid var(--accent);
-        }
-        .task-list li {
-            color: #ccc;
-            font-weight: 500;
-        }
-        .project-desc {
-            color: #999;
-            font-size: 0.9rem;
-            font-style: italic;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #333;
-            line-height: 1.5;
-        }
-
-        /* --- STYLES DU BOUTON DE BASCULE --- */
-        .toggle-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-        .toggle-btn {
-            background: #1a1a1a;
-            border: 1px solid #444;
-            color: #888;
-            padding: 12px 25px;
-            cursor: pointer;
-            font-family: 'Syne', sans-serif;
-            font-weight: 700;
-            text-transform: uppercase;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-        .toggle-btn:hover {
-            border-color: var(--accent);
-            color: #fff;
-        }
-        .toggle-btn.active {
-            background: var(--accent);
-            color: #000;
-            border-color: var(--accent);
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
-        }
-
-        /* Animation de transition */
-        .fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Style des liens dans la vue par compétences */
-        .view-skills-link {
-            color: var(--accent);
-            font-weight: bold;
-            text-decoration: none;
-            border-bottom: 1px dotted var(--accent);
-            margin-right: 5px;
-        }
-        .view-skills-link:hover {
-            background: rgba(0, 255, 255, 0.1);
-        }
-
-        /* Titre de sous-compétence (Vue Compétences) */
-        .task-title {
-            color: #ccc; 
-            font-weight: bold; 
-            margin-bottom: 10px; 
-            display: block; 
-            font-size: 0.95rem; 
-            border-bottom: 1px dashed #444; 
-            padding-bottom: 5px;
-        }
-    </style>
 </head>
 <body>
 
@@ -300,7 +211,7 @@
 
             <div class="card col-6">
                 <div class="comp-header">
-                    <span class="comp-title"><a href="RectoratPages/TP1html.html" target="_blank">Première page HTML</a></span>
+                    <span class="comp-title"><a href="RectoratPages/TP1html.html" target="_blank">TP : Première page HTML</a></span>
                 </div>
                 <p class="project-desc">Structure sémantique Web.</p>
                 <div class="task-group">
@@ -326,27 +237,27 @@
             </div>
             <div class="card col-6">
                 <div class="comp-header"><span class="comp-title"><a href="RectoratPages/LinkedIn.html" target="_blank">Identité Numérique</a></span></div>
-                <p class="project-desc">Valorisation du profil professionnel.</p>
+                <p class="project-desc">Réseau pro.</p>
                 <div class="task-group"><span class="comp-code">B1.6 Organiser son développement professionnel</span><ul class="task-list"><li>👉 Gérer son identité professionnelle</li></ul></div>
             </div>
             <div class="card col-6">
                 <div class="comp-header"><span class="comp-title"><a href="RectoratPages/etudeReferentiel.html" target="_blank">Étude Référentiel</a></span></div>
-                <p class="project-desc">Analyse du référentiel.</p>
+                <p class="project-desc">Cadre BTS SIO.</p>
                 <div class="task-group"><span class="comp-code">B1.6 Organiser son développement professionnel</span><ul class="task-list"><li>👉 Développer son projet professionnel</li></ul></div>
             </div>
             <div class="card col-6">
                 <div class="comp-header"><span class="comp-title"><a href="RectoratPages/ficheMetier.html" target="_blank">Fiche Métier</a></span></div>
-                <p class="project-desc">Analyse du secteur et des métiers.</p>
+                <p class="project-desc">Recherche orientation.</p>
                 <div class="task-group"><span class="comp-code">B1.6 Organiser son développement professionnel</span><ul class="task-list"><li>👉 Développer son projet professionnel</li></ul></div>
             </div>
             <div class="card col-6">
                 <div class="comp-header"><span class="comp-title"><a href="RectoratPages/sanctionEntreprise.html" target="_blank">Sanctions</a></span></div>
-                <p class="project-desc">Analyse des sanctions des entreprises.</p>
+                <p class="project-desc">Culture Juridique.</p>
                 <div class="task-group"><span class="comp-code">B1.6 Organiser son développement professionnel</span><ul class="task-list"><li>👉 Développer son projet professionnel</li></ul></div>
             </div>
             <div class="card col-6">
                 <div class="comp-header"><span class="comp-title"><a href="RectoratPages/Veille_Techno.html" target="_blank">Veille Techno</a></span></div>
-                <p class="project-desc">Utilisation d'outils de veille + bornage + mise en application + news.</p>
+                <p class="project-desc">Curation d'infos.</p>
                 <div class="task-group"><span class="comp-code">B1.6 Organiser son développement professionnel</span><ul class="task-list"><li>👉 Mettre en œuvre des outils et stratégies de veille informationnelle</li></ul></div>
             </div>
 
@@ -363,24 +274,24 @@
                     <span class="task-title">▸ Recenser et identifier les ressources numériques</span>
                     <ul class="task-list">
                         <li>👉 <a href="RectoratPages/powerBIStage.html" class="view-skills-link" target="_blank">Stage Power BI</a> : Identification des sources de données SQL.</li>
-                        <li>👉 <a href="RectoratPages/RecoJeux.html" class="view-skills-link" target="_blank">RecoJeux</a> : Site web statique puis dynamique.</li>
+                        <li>👉 <a href="RectoratPages/RecoJeux.html" class="view-skills-link" target="_blank">RecoJeux</a> : Inventaire des médias et maquettes.</li>
                     </ul>
                 </div>
                 <div class="task-group">
                     <span class="task-title">▸ Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</span>
                     <ul class="task-list">
                         <li>👉 <a href="RectoratPages/powerBIStage.html" class="view-skills-link" target="_blank">Stage Power BI</a> : Normes de nommage de l'entreprise.</li>
-                        <li>👉 <a href="RectoratPages/cybernews.html" class="view-skills-link" target="_blank">Cybernews</a> : Standards du web.</li>
-                        <li>👉 <a href="RectoratPages/zelda.html" class="view-skills-link" target="_blank">Zelda C#</a> : Conventions de nommage C#.</li>
+                        <li>👉 <a href="RectoratPages/cybernews.html" class="view-skills-link" target="_blank">Cybernews</a> : Standards du web et architecture MVC.</li>
+                        <li>👉 <a href="RectoratPages/zelda.html" class="view-skills-link" target="_blank">Zelda C#</a> : Conventions de codage C#.</li>
                         <li>👉 <a href="RectoratPages/conventionNommageCSHARP.html" class="view-skills-link" target="_blank">Morpion</a> : Syntaxe et indentation standardisée.</li>
-                        <li>👉 <a href="RectoratPages/TPw3c.html" class="view-skills-link" target="_blank">W3C</a> : Respect des normes HTML/CSS.</li>
-                        <li>👉 <a href="RectoratPages/TP1html.html" class="view-skills-link" target="_blank">HTML</a> : Structure sémantique et balisage.</li>
+                        <li>👉 <a href="RectoratPages/TPw3c.html" class="view-skills-link" target="_blank">TP W3C</a> : Respect des normes HTML5/CSS3.</li>
+                        <li>👉 <a href="RectoratPages/TP1html.html" class="view-skills-link" target="_blank">TP HTML</a> : Structure sémantique et balisage.</li>
                     </ul>
                 </div>
                 <div class="task-group">
                     <span class="task-title">▸ Mettre en place et vérifier les niveaux d’habilitation associés à un service</span>
                     <ul class="task-list">
-                        <li>👉 <a href="RectoratPages/revokeGrant.html" class="view-skills-link" target="_blank">SQL</a> : Attribution des privilèges (GRANT/REVOKE).</li>
+                        <li>👉 <a href="RectoratPages/revokeGrant.html" class="view-skills-link" target="_blank">TP SQL</a> : Attribution des privilèges (GRANT/REVOKE).</li>
                     </ul>
                 </div>
             </div>
@@ -393,7 +304,7 @@
                 <div class="task-group">
                     <span class="task-title">▸ Collecter, suivre et orienter des demandes</span>
                     <ul class="task-list">
-                        <li>👉 <a href="RectoratPages/GLPI.html" class="view-skills-link" target="_blank">GLPI</a> : Création et cycle de vie des tickets.</li>
+                        <li>👉 <a href="RectoratPages/GLPI.html" class="view-skills-link" target="_blank">TP GLPI</a> : Création et cycle de vie des tickets.</li>
                     </ul>
                 </div>
                 <div class="task-group">
@@ -454,7 +365,7 @@
                     <ul class="task-list">
                         <li>👉 <a href="RectoratPages/powerBIStage.html" class="view-skills-link" target="_blank">Stage Power BI</a> : Mise en production du rapport.</li>
                         <li>👉 <a href="RectoratPages/RecoJeux.html" class="view-skills-link" target="_blank">RecoJeux</a> : Hébergement sur serveur web.</li>
-                        <li>👉 <a href="RectoratPages/TPHebergerSite.html" class="view-skills-link" target="_blank">Déploiement</a> : Transfert de fichiers via FTP.</li>
+                        <li>👉 <a href="RectoratPages/TPHebergerSite.html" class="view-skills-link" target="_blank">TP Déploiement</a> : Transfert de fichiers via FTP.</li>
                     </ul>
                 </div>
                 <div class="task-group">
@@ -466,7 +377,7 @@
                 <div class="task-group">
                     <span class="task-title">▸ Réaliser les tests d’intégration et d’acceptation d’un service</span>
                     <ul class="task-list">
-                        <li>👉 <a href="RectoratPages/zelda.html" class="view-skills-link" target="_blank">Zelda C#</a> : Deploiement sur Android.</li>
+                        <li>👉 <a href="RectoratPages/zelda.html" class="view-skills-link" target="_blank">Zelda C#</a> : Tests unitaires et fonctionnels.</li>
                     </ul>
                 </div>
             </div>
@@ -493,16 +404,16 @@
                 <div class="task-group">
                     <span class="task-title">▸ Développer son projet professionnel</span>
                     <ul class="task-list">
-                        <li>👉 <a href="RectoratPages/etudeReferentiel.html" class="view-skills-link" target="_blank">Référentiel</a> : Analyse du référentiel.</li>
+                        <li>👉 <a href="RectoratPages/etudeReferentiel.html" class="view-skills-link" target="_blank">Référentiel</a> : Analyse du secteur et des métiers.</li>
                         <li>👉 <a href="RectoratPages/ficheMetier.html" class="view-skills-link" target="_blank">Fiche Métier</a> : Analyse du secteur et des métiers.</li>
-                        <li>👉 <a href="RectoratPages/sanctionEntreprise.html" class="view-skills-link" target="_blank">Sanction des entreprises</a> : Analyse des sanctions des entreprises.</li>
+                        <li>👉 <a href="RectoratPages/sanctionEntreprise.html" class="view-skills-link" target="_blank">Droit</a> : Analyse du secteur et des métiers.</li>
                     </ul>
                 </div>
                 <div class="task-group">
                     <span class="task-title">▸ Mettre en œuvre des outils et stratégies de veille informationnelle</span>
                     <ul class="task-list">
-                        <li>👉 <a href="RectoratPages/Veille_Techno.html" class="view-skills-link" target="_blank">Veille Technologique</a> : Utilisation d'outils de veille + bornage + mise en application + news.</li>
-                        <li>👉 <a href="RectoratPages/cybernews.html" class="view-skills-link" target="_blank">Cybernews</a> : Veille d'actualités sur la cybersécurité.</li>
+                        <li>👉 <a href="RectoratPages/Veille_Techno.html" class="view-skills-link" target="_blank">Veille Technologique</a> : Curation et analyse d'actualités.</li>
+                        <li>👉 <a href="RectoratPages/cybernews.html" class="view-skills-link" target="_blank">Cybernews</a> : Curation et analyse d'actualités.</li>
                     </ul>
                 </div>
             </div>
@@ -520,31 +431,7 @@
         © 2025 Enzo VINCENT - Portfolio
     </footer>
 
-    <script>
-        function switchView(viewName) {
-            // 1. Masquer les deux vues
-            document.getElementById('view-projects').style.display = 'none';
-            document.getElementById('view-skills').style.display = 'none';
-
-            // 2. Réinitialiser les boutons (enlever la classe active)
-            document.getElementById('btn-projects').classList.remove('active');
-            document.getElementById('btn-skills').classList.remove('active');
-
-            // 3. Afficher la vue demandée (Grid pour garder la mise en page Bento)
-            document.getElementById('view-' + viewName).style.display = 'grid'; 
-            
-            // 4. Activer le bouton correspondant
-            document.getElementById('btn-' + viewName).classList.add('active');
-
-            // 5. Mettre à jour le petit texte descriptif
-            const desc = document.getElementById('desc-text');
-            if(viewName === 'projects') {
-                desc.innerText = "Détail des compétences du Bloc 1 validées pour chaque projet et activité.";
-            } else {
-                desc.innerText = "Répartition des activités et projets par compétence du référentiel BTS SIO.";
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
