@@ -34,28 +34,59 @@
     </nav>
 
     <div class="container">
-        <h1 class="page-title">Rapport de Stage <br><span>Migration & Supervision Laravel</span>.</h1>
+        <h1 class="page-title">Rapport de Stage <br><span>SFC Solutions</span>.</h1>
 
         <div class="bento-grid">
             
             <div class="card col-12">
                 <span class="date">Du 05/01/2026 au 13/02/2026</span>
-                <h2>SFC Solutions Automotive France</h2>
-                <p>J'ai réalisé mon stage au sein de SFC Solutions, expert en systèmes d’étanchéité automobile, sous la tutelle de <strong>Valentin CAHAGNE</strong>.</p>
+                <div style="display: flex; justify-content: space-between; align-items: start; gap: 40px; flex-wrap: wrap;">
+                    <div style="flex: 1;">
+                        <h2>L'Entreprise : SFC Solutions Automotive France</h2>
+                        <p>SFC Solutions est une SAS (Société par Actions Simplifiée), experte dans le développement et la fabrication de systèmes d’étanchéité pour le secteur automobile.</p>
+                        <p style="margin-top: 10px; color: var(--text-muted);">
+                            <strong>Mission :</strong> Assurer la protection des véhicules (bruit, poussière, eau).<br>
+                            Membre d’Amaneos, acteur mondial de l’industrie automobile.
+                        </p>
+                    </div>
+                    <div style="background: #fff; padding: 10px; border-radius: 8px; width: 200px; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/logo_stage.png" alt="Logo SFC Solutions" style="width: 100%; border: none; margin: 0;">
+                    </div>
+                </div>
             </div>
 
-            <div class="card col-8">
-                <h2>Le Projet : Migration & Refonte PMC</h2>
-                <p>L'objectif était de migrer une application de supervision industrielle "Legacy" vers le framework <strong>Laravel 10</strong> afin de moderniser l'outil et d'en assurer la pérennité.</p>
+            <div class="card col-12">
+                <h2>Le Projet : Supervision PMC</h2>
+                <p style="font-size: 1.1rem; color: #fff; margin-bottom: 15px;"><strong>Objectif :</strong> Refonte d'une application de supervision industrielle vers <strong>Laravel</strong> et mise en place d'une authentification centralisée via LDAP.</p>
+                <div style="margin-top: 10px; border-top: 1px solid var(--border); padding-top: 15px;">
+                    <p class="date">Axes de développement :</p>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <span class="badge">Supervision Temps Réel</span>
+                        <span class="badge">Authentification Active Directory</span>
+                        <span class="badge">Filtrage de Relevés complexes</span>
+                        <span class="badge">Exports CSV Dynamiques</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="card col-4">
-                <h2>Stack Technique</h2>
-                <ul style="list-style: none; padding: 0; color: var(--text-muted);">
-                    <li>🚀 Laravel 10 / PHP</li>
-                    <li>🗄️ SQL Server</li>
-                    <li>⚡ AJAX / jQuery</li>
-                    <li>🛠️ Git / Composer</li>
+            <div class="card col-12">
+                <h2>Environnement Technique</h2>
+                <ul style="list-style: none; margin-top: 10px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    <li style="border-left: 2px solid var(--accent); padding-left: 10px;">
+                        💻 <strong>Logiciels :</strong><br> VS Code
+                    </li>
+                    <li style="border-left: 2px solid var(--accent); padding-left: 10px;">
+                        🚀 <strong>Framework :</strong><br> Laravel 10 (PHP 8.2)
+                    </li>
+                    <li style="border-left: 2px solid var(--accent); padding-left: 10px;">
+                        💾 <strong>SGBD :</strong><br> SQL Server
+                    </li>
+                    <li style="border-left: 2px solid var(--accent); padding-left: 10px;">
+                        🔐 <strong>Sécurité :</strong><br> LDAP / Middlewares
+                    </li>
+                    <li style="border-left: 2px solid var(--accent); padding-left: 10px;">
+                        ⚡ <strong>Frontend :</strong><br> AJAX / jQuery / Prism.js
+                    </li>
                 </ul>
             </div>
 
@@ -213,13 +244,80 @@ refreshElements = function() {
                     </div>
                 </div>
             </div>
+
+<div class="card col-12">
+    <h2>Aperçu Global de l'Application</h2>
+    <p style="margin-bottom: 20px; color: var(--text-muted);">Cliquez sur les interfaces pour les agrandir et visualiser l'ergonomie générale du projet.</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+        
+        <div style="text-align: center;">
+            <p class="date" style="margin-bottom: 8px;">Structure du Menu Nav</p>
+            <img src="images/MenuNav.png" alt="Menu Navigation" class="zoomable-img" onclick="openLightbox(this.src)" 
+                 style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+        </div>
+
+        <div style="text-align: center;">
+            <p class="date" style="margin-bottom: 8px;">Interface de Connexion (LDAP)</p>
+            <img src="images/login_ldap.png" alt="Rendu Login" class="zoomable-img" onclick="openLightbox(this.src)" 
+                 style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+        </div>
+
+        <div style="text-align: center;">
+            <p class="date" style="margin-bottom: 8px;">Dashboard de Supervision</p>
+            <img src="images/supervision_dashboard.png" alt="Rendu Supervision" class="zoomable-img" onclick="openLightbox(this.src)" 
+                 style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+        </div>
+
+        <div style="text-align: center;">
+            <p class="date" style="margin-bottom: 8px;">Consultation des Relevés</p>
+            <img src="images/PageReleves.png" alt="Rendu Relevés" class="zoomable-img" onclick="openLightbox(this.src)" 
+                 style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+        </div>
+
+        <div style="text-align: center;">
+            <p class="date" style="margin-bottom: 8px;">Consultation des données de découpe</p>
+            <img src="images/PageDecoupe.png" alt="Rendu Decoupe" class="zoomable-img" onclick="openLightbox(this.src)" 
+                 style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+        </div>
+
+        <div style="text-align: center;">
+            <p class="date" style="margin-bottom: 8px;">Rendue de la Gestion des lignes</p>
+            <img src="images/PageGestion.png" alt="Rendu Gestion" class="zoomable-img" onclick="openLightbox(this.src)" 
+                 style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+        </div>
+
+        <div style="text-align: center;">
+            <p class="date" style="margin-bottom: 8px;">Arborescence du Projet</p>
+            <img src="images/Structure1.png" alt="Structure 1" class="zoomable-img" onclick="openLightbox(this.src)" 
+                 style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+        </div>
+
+        <div style="text-align: center;">
+            <p class="date" style="margin-bottom: 8px;">Organisation des Fichiers</p>
+            <img src="images/Structure2.png" alt="Structure 2" class="zoomable-img" onclick="openLightbox(this.src)" 
+                 style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+        </div>
+        
+    </div>
+</div>
+
             <div class="card col-12">
-                <h2>Compétences SIO Validées</h2>
-                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
-                    <span class="badge">B1.3 Protéger les données</span>
-                    <span class="badge">B2.1 Concevoir et développer</span>
-                    <span class="badge">B2.2 Maintenir les applications</span>
-                </div>
+                <h2>Compétences Validées</h2>
+                <ul style="list-style: none; margin-top: 15px;">
+                    <li style="margin-bottom: 15px;">
+                        <span class="comp-badge">B1.1</span> <strong>Gérer le patrimoine informatique</strong><br>
+                        <span style="font-size: 0.9rem; color: #888;">Recenser et identifier les ressources numériques</span>
+                    </li>
+                    <li style="margin-bottom: 15px;">
+                        <span class="comp-badge">B1.3</span> <strong>Développer la présence en ligne</strong><br>
+                        <span style="font-size: 0.9rem; color: #888;">Participer à l’évolution d’un site Web exploitant les données de l’organisation.</span>
+                    </li>
+                    <li style="margin-bottom: 15px;">
+                        <span class="comp-badge">B1.4</span> <strong>Travailler en mode projet</strong><br>
+                        <span style="font-size: 0.9rem; color: #888;">Planifier les activités</span>
+                    </li>
+                </ul>
             </div>
 
         </div>
