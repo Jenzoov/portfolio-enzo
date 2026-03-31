@@ -53,6 +53,29 @@ const toolsData = {
             { src: 'images/inoreader_1.jpg', desc: "<strong>Interface Pro :</strong> Permet des filtres plus poussés et une gestion dense de l'information." }
         ],
         rex: "Inoreader m'a offert des options de filtrage avancées qui m'ont aidé à réduire le bruit dans ma veille. La possibilité de créer des règles personnalisées a optimisé mon flux d'informations."
+    },
+    'sweetalert': {
+        title: "Processus d'exportation avec SweetAlert2",
+        intro: "Gestion dynamique des retours utilisateurs pour le module d'extraction des données de production.",
+        images: [
+            { 
+                src: 'images/CodeSweetAttention.png', 
+                desc: "<strong>Étape 1 (Code) :</strong> Implémentation de la vérification des colonnes. Si aucune n'est sélectionnée, une alerte de type 'warning' est déclenchée pour bloquer l'envoi." 
+            },
+            { 
+                src: 'images/Attention.png', 
+                desc: "<strong>Étape 2 (Rendu) :</strong> Affichage de l'alerte d'avertissement stylisée informant l'utilisateur qu'il doit choisir au moins un champ pour l'export." 
+            },
+            { 
+                src: 'images/CodeSweetExportation.png', 
+                desc: "<strong>Étape 3 (Code) :</strong> Logique de succès déclenchée après la réponse positive du serveur, configurant l'affichage de la notification de réussite." 
+            },
+            { 
+                src: 'images/Exportation.png', 
+                desc: "<strong>Étape 4 (Rendu) :</strong> Confirmation visuelle de la génération du CSV. L'interface reste propre et professionnelle grâce au design moderne de SweetAlert2." 
+            }
+        ],
+        rex: "L'intégration de SweetAlert2 a permis de transformer des interactions système basiques en une expérience utilisateur (UX) fluide. Techniquement, cela m'a permis de mieux gérer les promesses (Promises) JavaScript, puisque SweetAlert2 attend une action utilisateur avant de poursuivre l'exécution du code."
     }
 };
 
@@ -236,4 +259,17 @@ function switchView(viewName) {
             descText.innerText = "Répartition des activités et projets par compétence du référentiel BTS SIO.";
         }
     }
+}
+
+function openLightbox(imageSrc) {
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    lightboxImg.src = imageSrc;
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    document.getElementById('image-lightbox').style.display = 'none';
+    document.body.style.overflow = 'auto';
 }

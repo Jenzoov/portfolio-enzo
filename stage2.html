@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stage 2ème Année - Enzo VINCENT</title>
+    <title>Rapport de Stage | SFC Solutions</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 </head>
 <body>
 
     <nav>
         <div class="nav-container">
             <div class="logo">Portfolio</div>
-            
             <div class="nav-links" style="display: flex; align-items: center;">
                 <a href="index.html">CV / Accueil</a>
-                
                 <div class="dropdown">
                     <button class="dropbtn active-drop">Stage ▾</button>
                     <div class="dropdown-content">
@@ -22,9 +21,7 @@
                         <a href="stage2.html" style="color: var(--accent);">2ème année</a>
                     </div>
                 </div>
-
                 <a href="veille.html">Veille</a>
-
                 <div class="dropdown">
                     <a href="rectorat.html" class="dropbtn">Rectorat ▾</a>
                     <div class="dropdown-content">
@@ -37,20 +34,210 @@
     </nav>
 
     <div class="container">
-        <h1 class="page-title">Stage <br><span>2ème Année</span>.</h1>
+        <h1 class="page-title">Rapport de Stage <br><span>Migration & Supervision Laravel</span>.</h1>
 
         <div class="bento-grid">
             
-            <div class="card col-12 placeholder-box">
-                <h2 style="border-bottom: none; font-size: 2rem; margin-bottom: 10px;">🚧</h2>
-                <h3 style="color: #fff;">Contenu en cours de création</h3>
-                <p style="color: #888;">Le rapport de stage de 2ème année sera ajouté prochainement.</p>
+            <div class="card col-12">
+                <span class="date">Du 05/01/2026 au 13/02/2026</span>
+                <h2>SFC Solutions Automotive France</h2>
+                <p>J'ai réalisé mon stage au sein de SFC Solutions, expert en systèmes d’étanchéité automobile, sous la tutelle de <strong>Valentin CAHAGNE</strong>.</p>
+            </div>
+
+            <div class="card col-8">
+                <h2>Le Projet : Migration & Refonte PMC</h2>
+                <p>L'objectif était de migrer une application de supervision industrielle "Legacy" vers le framework <strong>Laravel 10</strong> afin de moderniser l'outil et d'en assurer la pérennité.</p>
+            </div>
+
+            <div class="card col-4">
+                <h2>Stack Technique</h2>
+                <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+                    <li>🚀 Laravel 10 / PHP</li>
+                    <li>🗄️ SQL Server</li>
+                    <li>⚡ AJAX / jQuery</li>
+                    <li>🛠️ Git / Composer</li>
+                </ul>
+            </div>
+
+            <div class="card col-12">
+                <h2>Organisation : Suivi du projet (To-Do List)</h2>
+                <p style="margin-bottom: 20px;">Utilisation d'un outil de gestion de tâches pour prioriser les développements :</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <img src="images/todolist_1.png" alt="To-Do List 1" style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+                    <img src="images/todolist_2.png" alt="To-Do List 2" style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+                </div>
+            </div>
+
+            <div class="card col-12">
+                <h2>1. Sécurisation & Authentification LDAP</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 30px; margin-top: 20px;">
+                    
+                    <div>
+                        <p style="margin-bottom: 15px;">L'application interroge l'Active Directory de l'entreprise pour permettre aux employés d'utiliser leurs identifiants Windows.</p>
+                        <p class="date" style="margin-bottom: 8px;">Rendu de l'interface :</p>
+                        <img src="images/login_ldap.png" alt="Interface Login" class="zoomable-img" onclick="openLightbox(this.src)" style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+                    </div>
+
+                    <div>
+                        <p class="date" style="margin-bottom: 8px;">Logique du Controller :</p>
+                        <pre><code class="language-php">
+$ldap = ldap_connect($adServer);
+$bind = @ldap_bind($ldap, $ldaprdn, $password);
+
+if ($bind) {
+    $user = User::updateOrCreate(
+        ['pseudonyme' => $info[$i]["samaccountname"][0]],
+        ['nom' => $info[$i]["sn"][0], 'prenom' => $info[$i]["givenname"][0]]
+    );
+    Auth::login($user);
+    return redirect()->route('accueil');
+}
+                        </code></pre>
+
+                        <p class="date" style="margin-top: 20px; margin-bottom: 8px;">Configuration des Routes (Middlewares) :</p>
+                        <img src="images/RoutesAuth.png" alt="Routes Laravel" style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+                    </div>
+                </div>
+            </div>
+
+<div class="card col-12">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2>2. Supervision Temps Réel : Logique de données</h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 25px;">
+                    
+                    <div>
+                        <p class="date" style="margin-bottom: 8px;">Traitement des données (Modèle/Controller) :</p>
+                        <pre><code class="language-php">
+public function getLines() 
+{
+    $lines = DB::table('list_lines')
+        ->orderBy('id_ligne')
+        ->select('id_ligne', 'name')
+        ->get();
+
+    return response()->json($lines);
+}
+                        </code></pre>
+
+                        <p class="date" style="margin-top: 20px; margin-bottom: 8px;">Script d'actualisation dynamique :</p>
+                        <pre><code class="language-javascript">
+//fonction de rafraîchissement
+setInterval(refreshElements, 10000);
+
+refreshElements = function() {
+    $.getJSON("{{ url('api/equipment') }}?id=" + ids)
+    .done(function(items) {
+        //mise a jour de l'interface...
+
+                        </code></pre>
+                        <p class="date" style="margin-top: 20px; margin-bottom: 8px;">Configuration des Routes (Middlewares) :</p>
+                        <img src="images/RoutesSupervision.png" alt="Routes Laravel" style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+                    </div>
+
+                    <div>
+                        <p style="margin-bottom: 15px;">
+                            Cette partie gère l'affichage dynamique des lignes de production. Le défi était de traiter les données provenant du serveur <strong>CLSEALYNX</strong> en SQL Server et de les renvoyer proprement vers l'interface Laravel.
+                        </p>
+                        <p class="date" style="margin-bottom: 8px;">Rendu de l'interface :</p>
+                        <img src="images/supervision_dashboard.png" alt="Dashboard de supervision" class="zoomable-img" onclick="openLightbox(this.src)"
+                             style="width: 100%; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-12">
+                <h2>3. Gestion des Relevés Journaliers</h2>
+                <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; margin-top: 20px;">
+                    
+                    <div>
+                        <p class="date" style="margin-bottom: 8px;">Logique de filtrage (RelevesJourController) :</p>
+                        <pre><code class="language-php">
+  elseif ($request->has('ref') && $request->has('ligne')) {
+      $ref = $request->input('ref');
+      $limit = $request->input('limit', 50); //Par défaut 50 résultats
+      $query = RelevesJour::where('id_ligne', $ligne);
+
+      $hasFilter = false;
+      if ($request->has('boudineuse1')) {
+          $query->where('b1_ref', 'LIKE', "%{$ref}%");
+          $hasFilter = true;
+     }
+     if ($request->has('boudineuse2')) {
+         if ($hasFilter) {
+             $query->orWhere('b2_ref', 'LIKE', "%{$ref}%");
+         } else {
+             $query->where('b2_ref', 'LIKE', "%{$ref}%");
+             $hasFilter = true;
+         }
+     }
+     if ($request->has('boudineuse3')) {
+         if ($hasFilter) {
+             $query->orWhere('b3_ref', 'LIKE', "%{$ref}%");
+         } else {
+             $query->where('b3_ref', 'LIKE', "%{$ref}%");
+         }
+     }
+
+     $query->orderByDesc('enregistrement');
+                        </code></pre>
+                        
+                        <p class="date" style="margin-top: 20px; margin-bottom: 8px;">Capture du code source :</p>
+                        <img src="images/CodeBladeReleves.png" alt="Code RelevesJour" style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+                    </div>
+
+                    <div>
+                        <p style="margin-bottom: 15px;">
+                            Ce module permet aux utilisateurs de consulter l'historique et d'extraire des données spécifiques. J'ai mis en place un système d'exportation <strong>CSV personnalisable</strong>.
+                        </p>
+                        
+                        <p class="date" style="margin-bottom: 8px;">Rendu de l'interface :</p>
+                        <img src="images/PageReleves.png" alt="Rendu final RelevesJour" class="zoomable-img" onclick="openLightbox(this.src)" style="width: 100%; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 20px;">
+
+                        <p class="date" style="margin-top: 20px; margin-bottom: 8px;">Configuration des Routes (Middlewares) :</p>
+                        <img src="images/RoutesReleves.png" alt="Routes Laravel" style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+                        
+                        
+                        <div class="tool-card" onclick="openModal('sweetalert')" style="margin-top: 20px; cursor: pointer;">
+    <div style="background: var(--surface-hover); padding: 15px; border-radius: 8px; border-left: 3px solid var(--accent);">
+        <p style="font-size: 0.85rem; color: var(--text-muted);">
+            <strong>💡 Note :</strong> L'export utilise <strong>SweetAlert2</strong> pour confirmer l'action.
+        </p>
+        <span style="color: var(--accent); font-size: 0.8rem;">Cliquez ici pour voir les 4 étapes de l'export.</span>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="card col-12">
+                <h2>Compétences SIO Validées</h2>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+                    <span class="badge">B1.3 Protéger les données</span>
+                    <span class="badge">B2.1 Concevoir et développer</span>
+                    <span class="badge">B2.2 Maintenir les applications</span>
+                </div>
             </div>
 
         </div>
     </div>
 
-    <footer>© <script>document.write(new Date().getFullYear())</script> Enzo VINCENT</footer>
+    <div id="galleryModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content"></div>
+    </div>
 
+    <div id="image-lightbox" onclick="closeLightbox()">
+        <img src="" alt="Image agrandie">
+    </div>
+    <footer>© <script>document.write(new Date().getFullYear())</script> Enzo VINCENT</footer>
+<script src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-php.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
 </body>
 </html>
