@@ -811,3 +811,49 @@ select.select-filter:focus {
     border-radius: 8px;
     border: none;
 }
+
+/* --- 13. AJOUTS POUR BORNAGE CLIQUABLE --- */
+
+/* Rend les boîtes de bornage cliquables avec un feedback visuel */
+.clickable-bornage {
+    cursor: pointer !important;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.clickable-bornage:hover {
+    background: var(--surface-hover);
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
+}
+
+.clickable-bornage:active {
+    transform: translateY(0);
+}
+
+/* Ajustement de la Rex Box pour les modales de bornage (Thème Sombre) */
+/* On surcharge le style existant pour qu'il soit cohérent avec le fond noir */
+.modal-content .modal-rex-box {
+    background-color: #222 !important; /* Fond plus clair que la modale mais reste sombre */
+    border-left: 4px solid var(--accent) !important; /* Bordure cyan */
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.modal-content .modal-rex-box h3 {
+    color: var(--accent) !important;
+    font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.modal-content .modal-rex-box p {
+    color: #ccc !important;
+    font-style: normal !important;
+    line-height: 1.6;
+}

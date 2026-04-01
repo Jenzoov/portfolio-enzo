@@ -273,3 +273,50 @@ function closeLightbox() {
     document.getElementById('image-lightbox').style.display = 'none';
     document.body.style.overflow = 'auto';
 }
+
+/* --- DONNÉES DES BORNAGES --- */
+const bornagesData = {
+    'securite': {
+        title: "🛡️ Sécurité & Robustesse",
+        intro: "Focus sur la fiabilité des langages et la gestion de la mémoire.",
+        description: "Ce bornage analyse comment les langages modernes (comme Rust) ou les évolutions des langages anciens (C++ Profiles) tentent de répondre aux enjeux de cybersécurité, notamment en évitant les failles de segmentation et les fuites de mémoire."
+    },
+    'ia': {
+        title: "🤖 Place de l'IA",
+        intro: "L'impact de l'intelligence artificielle sur l'écriture du code.",
+        description: "Étude de l'intégration de l'IA dans le workflow des développeurs (Copilot, Code Assist) et l'émergence de nouveaux concepts comme le 'Vibe Coding', tout en surveillant les limites éthiques et techniques de ces outils."
+    },
+    'ecosysteme': {
+        title: "⚡ Écosystème & Outillage",
+        intro: "L'évolution des environnements de développement et des frameworks.",
+        description: "Suivi des mises à jour majeures des runtimes (Node.js, .NET 10), des nouveaux outils de gestion de versions et de l'évolution des standards (PHP 8.5, TypeScript) qui facilitent le quotidien des développeurs."
+    },
+    'adoption': {
+        title: "🏭 Adoption Professionnelle",
+        intro: "L'utilisation des langages dans les secteurs critiques.",
+        description: "Analyse de la transition des entreprises et des secteurs étatiques vers de nouvelles technologies. Cela inclut l'arrivée de Rust dans le noyau Linux ou Windows, et la pérennité des langages historiques comme Java."
+    }
+};
+
+/* --- FONCTION D'OUVERTURE MODAL BORNAGE --- */
+function openBornageModal(bornageId) {
+    const modal = document.getElementById("galleryModal");
+    const container = document.querySelector(".modal-content");
+    const data = bornagesData[bornageId];
+
+    if (modal && container && data) {
+        container.innerHTML = `
+            <div class="modal-header">
+                <h2>${data.title}</h2>
+                <p class="modal-intro">${data.intro}</p>
+            </div>
+            <div class="modal-rex-box" style="margin-top: 20px;">
+                <h3>Description du périmètre</h3>
+                <p>${data.description}</p>
+            </div>
+        `;
+        
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden";
+    }
+}
